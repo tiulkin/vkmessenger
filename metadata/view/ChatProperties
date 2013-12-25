@@ -1,0 +1,828 @@
+{
+    "type": "Ext.Container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "chatproperties",
+        "designer|userClassName": "ChatProperties",
+        "itemId": null,
+        "layout": "vbox",
+        "scrollable": [
+            "true"
+        ]
+    },
+    "configAlternates": {
+        "scrollable": "object"
+    },
+    "designerId": "c04d0e36-ce15-4c3d-a191-ca581d497fd2",
+    "cn": [
+        {
+            "type": "Ext.TitleBar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "container|pack": "justify",
+                "designer|uiInterfaceName": "plain",
+                "docked": "top",
+                "hidden": true,
+                "itemId": "userNameSettings",
+                "ui": "plain"
+            },
+            "designerId": "e61d7724-f263-4354-95cc-2a1ffc6e15d6"
+        },
+        {
+            "type": "Ext.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "container|align": "center",
+                "container|pack": "center",
+                "height": null,
+                "itemId": "mycontainer143",
+                "layout": "vbox",
+                "width": null
+            },
+            "designerId": "0457b4fb-85ef-4671-9909-cbb6c83221ed",
+            "cn": [
+                {
+                    "type": "Ext.Component",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "addButton"
+                        ],
+                        "height": null,
+                        "itemId": "chatProfilePhoto",
+                        "margin": 5,
+                        "width": null
+                    },
+                    "designerId": "18cdbcb2-a2a0-46aa-878d-e3c392435e43"
+                },
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onMycontainer143Painted",
+                        "implHandler": [
+                            "element.dom.addEventListener('click',VKM.app.loadChatPhoto);"
+                        ],
+                        "name": "painted"
+                    },
+                    "designerId": "9ebeaacc-0430-4426-bda5-be7055744df3"
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "itemId": "nameSet",
+                "title": null
+            },
+            "designerId": "26a4f09d-5eae-4b43-b8da-1233cbf0b49d",
+            "cn": [
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "chatName",
+                        "label": null
+                    },
+                    "designerId": "db84e9db-ccfc-4bca-abc4-4d2cf6cef736",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onChatNameBlur",
+                                "implHandler": [
+                                    "if(textfield.getValue()!=textfield.oldValue&&textfield.getValue()!='')\r",
+                                    "{    \r",
+                                    "    textfield.oldValue=textfield.getValue();\r",
+                                    "    var controller=VKM.app.getController('Dialogues');\r",
+                                    "    var chatRecord=Ext.getStore('AllMessages').getById(20000000+textfield.chatId);\r",
+                                    "    chatRecord.set('title',textfield.getValue());\r",
+                                    "    controller.loadChatHeaderData(chatRecord.get('user_id'),chatRecord);\r",
+                                    "    \r",
+                                    "    var dataController=VKM.app.getController('DataLoader');    \r",
+                                    "    var url='https://api.vk.com/method/messages.editChat';\r",
+                                    "    var params=\r",
+                                    "        {\r",
+                                    "            v:'5.4',\r",
+                                    "            chat_id:textfield.chatId,\r",
+                                    "            title:textfield.getValue(),\r",
+                                    "            access_token:VKM.app.globals.authData['access_token']\r",
+                                    "        };\r",
+                                    "    dataController.go(url,params);\r",
+                                    "    \r",
+                                    "\r",
+                                    "}\r",
+                                    ""
+                                ],
+                                "name": "blur"
+                            },
+                            "designerId": "74bf2f75-7b5e-4692-b516-3be80ff9152e"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "hidden": null,
+                "itemId": "userNewMessageSettings1"
+            },
+            "designerId": "81c04469-5749-4d21-b7f7-da29981d6de2",
+            "cn": [
+                {
+                    "type": "Ext.field.Toggle",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "customPropsChat",
+                        "label": null,
+                        "labelWidth": "60%"
+                    },
+                    "designerId": "c314a876-bd5b-4d45-92fe-45471178cfa9",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onVibrateToggleChange211",
+                                "implHandler": [
+                                    "userId=togglefield.up('#userNewMessageSettings1').userId;\r",
+                                    "\r",
+                                    "if(userId)\r",
+                                    "{ \r",
+                                    "    var settingsStore=Ext.getStore('userSettings');\r",
+                                    "    var record=settingsStore.getById(userId);\r",
+                                    "    if(!record)\r",
+                                    "    {\r",
+                                    "        record=new VKM.model.userSettings({id:userId,isActive:newValue});\r",
+                                    "        settingsStore.add(record);\r",
+                                    "    }\r",
+                                    "    else\r",
+                                    "    {\r",
+                                    "        record.set({isActive:newValue});\r",
+                                    "    };\r",
+                                    "    record.save();\r",
+                                    "    \r",
+                                    "}\r",
+                                    "if(newValue)\r",
+                                    "{\r",
+                                    "    togglefield.up('#userNewMessageSettings1').down('#soundSelectChat').setDisabled(false);\r",
+                                    "    togglefield.up('#userNewMessageSettings1').down('#vibrateToggleChat').setDisabled(false);\r",
+                                    "    togglefield.up('#userNewMessageSettings1').down('#bannerToggleChat').setDisabled(false);\r",
+                                    "}\r",
+                                    "else\r",
+                                    "{\r",
+                                    "    togglefield.up('#userNewMessageSettings1').down('#soundSelectChat').setDisabled(true);\r",
+                                    "    togglefield.up('#userNewMessageSettings1').down('#vibrateToggleChat').setDisabled(true);\r",
+                                    "    togglefield.up('#userNewMessageSettings1').down('#bannerToggleChat').setDisabled(true);\r",
+                                    "}\r",
+                                    ""
+                                ],
+                                "name": "change"
+                            },
+                            "designerId": "56184027-9bdd-47a4-9e16-60603da650c4"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.field.Select",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "autoSelect": false,
+                        "hidden": null,
+                        "itemId": "soundSelectChat",
+                        "label": "Field",
+                        "labelWidth": "60%"
+                    },
+                    "designerId": "0e00607d-515a-4b36-9b2c-93a8693a93b5",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onNoticeSelectChange21",
+                                "implHandler": [
+                                    "userId=selectfield.up('#userNewMessageSettings1').userId;\r",
+                                    "if(userId)\r",
+                                    "{\r",
+                                    "    if(!VKM.app.globals.isInit)\r",
+                                    "    {\r",
+                                    "        if(newValue&&newValue!='none')\r",
+                                    "        {\r",
+                                    "            VKM.app.globals.notificationAudio[newValue].play();\r",
+                                    "        }\r",
+                                    "    }\r",
+                                    "            \r",
+                                    "    var settingsStore=Ext.getStore('userSettings');\r",
+                                    "    var record=settingsStore.getById(userId);\r",
+                                    "    if(!record)\r",
+                                    "    {\r",
+                                    "        record=new VKM.model.userSettings({id:userId,sound:newValue});\r",
+                                    "        settingsStore.add(record);\r",
+                                    "    }\r",
+                                    "    else\r",
+                                    "    {\r",
+                                    "        record.set({sound:newValue});\r",
+                                    "    };\r",
+                                    "    record.save();\r",
+                                    "}"
+                                ],
+                                "name": "change"
+                            },
+                            "designerId": "0d9bf237-2c52-460a-a9fe-8ecdab1690d3"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.field.Toggle",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "vibrateToggleChat",
+                        "label": null,
+                        "labelWidth": "60%"
+                    },
+                    "designerId": "84eb4c8f-f614-4ae2-b7e5-d3ff7bf845c4",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onVibrateToggleChange22",
+                                "implHandler": [
+                                    "userId=togglefield.up('#userNewMessageSettings1').userId;\r",
+                                    "if(userId)\r",
+                                    "{\r",
+                                    "    if(!VKM.app.globals.isInit)\r",
+                                    "    {\r",
+                                    "        if(newValue&&tizen)    \r",
+                                    "        {\r",
+                                    "            navigator.vibrate([1000, 1000]);\r",
+                                    "        }\r",
+                                    "    }\r",
+                                    "    \r",
+                                    "    var settingsStore=Ext.getStore('userSettings');\r",
+                                    "    var record=settingsStore.getById(userId);\r",
+                                    "    if(!record)\r",
+                                    "    {\r",
+                                    "        record=new VKM.model.userSettings({id:userId,vibrate:newValue});\r",
+                                    "        settingsStore.add(record);\r",
+                                    "    }\r",
+                                    "    else\r",
+                                    "    {\r",
+                                    "        record.set({vibrate:newValue});\r",
+                                    "    };\r",
+                                    "    record.save();\r",
+                                    "}"
+                                ],
+                                "name": "change"
+                            },
+                            "designerId": "1e9201ab-52f7-4946-a004-fc70f1545d70"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.field.Toggle",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "bannerToggleChat",
+                        "label": null,
+                        "labelWidth": "60%"
+                    },
+                    "designerId": "99e6009a-1a2e-456d-9ef8-65c57dfbaa5a",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onSoundToggleChange21",
+                                "implHandler": [
+                                    "userId=togglefield.up('#userNewMessageSettings1').userId;\r",
+                                    "if(userId)\r",
+                                    "{\r",
+                                    "    \r",
+                                    "    if(!VKM.app.globals.isInit)\r",
+                                    "    {\r",
+                                    "        if(newValue&&tizen)\r",
+                                    "        {\r",
+                                    "            VKM.app.SimpleNotification('',ux.locale.Manager.get('labels.messagelooks'),'')\r",
+                                    "        }\r",
+                                    "        \r",
+                                    "    }\r",
+                                    "    \r",
+                                    "    var settingsStore=Ext.getStore('userSettings');\r",
+                                    "    var record=settingsStore.getById(userId);\r",
+                                    "    if(!record)\r",
+                                    "    {\r",
+                                    "        record=new VKM.model.userSettings({id:userId,banner:newValue});\r",
+                                    "        settingsStore.add(record);\r",
+                                    "    }\r",
+                                    "    else\r",
+                                    "    {\r",
+                                    "        record.set({banner:newValue});\r",
+                                    "    };\r",
+                                    "    record.save();\r",
+                                    "}"
+                                ],
+                                "name": "change"
+                            },
+                            "designerId": "70945d0d-3c05-4a8c-9402-a147589e2ddb"
+                        }
+                    ]
+                },
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onUserNewMessageSettingsPainted1",
+                        "implHandler": [
+                            "// var controller=VKM.app.getController('Contacts');\r",
+                            "// if (controller.currentContact)\r",
+                            "{\r",
+                            "    var userId=VKM.app.globals.chat.currentChatId+2000000000\r",
+                            "    this.userId=userId;\r",
+                            "    \r",
+                            "    VKM.app.globals.isInit=true;\r",
+                            "    this.setTitle(ux.locale.Manager.get('labels.newMessage'));\r",
+                            "    this.down('#customPropsChat').setLabel(ux.locale.Manager.get('labels.customProps'));\r",
+                            "    this.down('#soundSelectChat').setLabel(ux.locale.Manager.get('labels.Sound'));\r",
+                            "    this.down('#vibrateToggleChat').setLabel(ux.locale.Manager.get('labels.Vibrate'));\r",
+                            "    this.down('#bannerToggleChat').setLabel(ux.locale.Manager.get('labels.Banner'));\r",
+                            "    //this.down('#customProps').setTitle(ux.locale.Manager.get('labels.customProps'));\r",
+                            "\r",
+                            "\r",
+                            "    var settingsStore=Ext.getStore('userSettings');\r",
+                            "\r",
+                            "    var record=settingsStore.getById(userId);\r",
+                            "\r",
+                            "    var soundSelect=[\r",
+                            "        {\r",
+                            "            value:'none',\r",
+                            "            text:ux.locale.Manager.get('labels.none')\r",
+                            "        },\r",
+                            "        {\r",
+                            "            value:1,\r",
+                            "            text:\"#1\"\r",
+                            "        },\r",
+                            "        {\r",
+                            "            value:2,\r",
+                            "            text:\"#2\"\r",
+                            "        },\r",
+                            "        {\r",
+                            "            value:3,\r",
+                            "            text:\"#3\"\r",
+                            "        },\r",
+                            "        {\r",
+                            "            value:4,\r",
+                            "            text:\"#4\"\r",
+                            "        },\r",
+                            "        {\r",
+                            "            value:5,\r",
+                            "            text:\"#5\"\r",
+                            "        },\r",
+                            "        {\r",
+                            "            value:6,\r",
+                            "            text:\"#6\"\r",
+                            "        },\r",
+                            "        {\r",
+                            "            value:7,\r",
+                            "            text:\"#7\"\r",
+                            "        },\r",
+                            "        {\r",
+                            "            value:8,\r",
+                            "            text:\"#8\"\r",
+                            "        },\r",
+                            "        {\r",
+                            "            value:9,\r",
+                            "            text:\"#9\"\r",
+                            "        },\r",
+                            "        {\r",
+                            "            value:10,\r",
+                            "            text:\"#10\"\r",
+                            "        },\r",
+                            "        {\r",
+                            "            value:11,\r",
+                            "            text:\"#11\"\r",
+                            "        },\r",
+                            "        {\r",
+                            "            value:12,\r",
+                            "            text:\"#12\"\r",
+                            "        },\r",
+                            "        {\r",
+                            "            value:13,\r",
+                            "            text:\"#13\"\r",
+                            "        },\r",
+                            "        {\r",
+                            "            value:14,\r",
+                            "            text:\"#14\"\r",
+                            "        },\r",
+                            "        {\r",
+                            "            value:15,\r",
+                            "            text:\"#15\"\r",
+                            "        },\r",
+                            "        {\r",
+                            "            value:16,\r",
+                            "            text:\"#16\"\r",
+                            "        },\r",
+                            "        {\r",
+                            "            value:17,\r",
+                            "            text:\"#17\"\r",
+                            "        },\r",
+                            "        {\r",
+                            "            value:18,\r",
+                            "            text:\"#18\"\r",
+                            "        },\r",
+                            "        {\r",
+                            "            value:19,\r",
+                            "            text:\"#19\"\r",
+                            "        },\r",
+                            "        {\r",
+                            "            value:20,\r",
+                            "            text:\"#20\"\r",
+                            "        }\r",
+                            "    ];\r",
+                            "\r",
+                            "    this.down('#soundSelectChat').setOptions(soundSelect);\r",
+                            "\r",
+                            "\r",
+                            "\r",
+                            "    if(record)\r",
+                            "    {\r",
+                            "        if (record.get('sound'))\r",
+                            "        {\r",
+                            "            this.down('#soundSelectChat').setValue(record.get('soundChat'));\r",
+                            "        }\r",
+                            "        else\r",
+                            "        {\r",
+                            "            this.down('#soundSelectChat').setValue(false);\r",
+                            "        };\r",
+                            "        if (record.get('vibrate'))\r",
+                            "        {\r",
+                            "            this.down('#vibrateToggleChat').setValue(record.get('vibrate'));\r",
+                            "        }\r",
+                            "        else\r",
+                            "        {\r",
+                            "            this.down('#vibrateToggleChat').setValue(false);\r",
+                            "        };\r",
+                            "        if (record.get('banner'))\r",
+                            "        {\r",
+                            "            this.down('#bannerToggleChat').setValue(record.get('banner'));\r",
+                            "        }\r",
+                            "        else\r",
+                            "        {\r",
+                            "            this.down('#bannerToggleChat').setValue(false);\r",
+                            "        };\r",
+                            "        if (record.get('isActive'))\r",
+                            "        {\r",
+                            "            this.down('#customPropsChat').setValue(record.get('isActive'));\r",
+                            "        }\r",
+                            "        else\r",
+                            "        {\r",
+                            "            this.down('#customPropsChat').setValue(false);\r",
+                            "        }\r",
+                            "        //     if (record.get('keepBanner'))\r",
+                            "        //     {\r",
+                            "        //         this.down('#keepBannerCheck').setValue(record.get('isActive'));\r",
+                            "        //     };\r",
+                            "    }\r",
+                            "    else\r",
+                            "    {\r",
+                            "        this.down('#customPropsChat').setValue(false);\r",
+                            "        this.down('#soundSelectChat').setValue(null);\r",
+                            "        this.down('#vibrateToggleChat').setValue(null);\r",
+                            "        this.down('#bannerToggleChat').setValue(null);\r",
+                            "    }\r",
+                            "\r",
+                            "    VKM.app.globals.isInit=false;\r",
+                            "}"
+                        ],
+                        "name": "painted"
+                    },
+                    "designerId": "a010e45c-ddf5-41b6-b8c3-4eeb9b23bf4c"
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|uiInterfaceName": "light",
+                "height": null,
+                "itemId": "chatMembers",
+                "layout": null,
+                "ui": "light"
+            },
+            "designerId": "9e57630b-7b39-4ee0-a0ac-5c4b4d19a8de"
+        },
+        {
+            "type": "Ext.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "bottom",
+                "layout": null,
+                "margin": 5,
+                "width": null
+            },
+            "designerId": "ed44a76d-58e2-4a34-b4e7-b9a650e70654",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|uiInterfaceName": "action",
+                        "docked": "left",
+                        "iconCls": "arrow_left",
+                        "id": "removeFromFriendsButton3",
+                        "itemId": null,
+                        "locales": null,
+                        "text": null,
+                        "ui": "action",
+                        "width": null
+                    },
+                    "configAlternates": {
+                        "locales": "array",
+                        "style": "object"
+                    },
+                    "designerId": "ac6bbef0-7120-4b58-ba1c-c063d1d601e7",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "locales",
+                            "type": "string"
+                        }
+                    ],
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onRemoveFromFriendsButton2Tap1",
+                                "implHandler": [
+                                    "var controller=VKM.app.getController('Dialogues');\r",
+                                    "controller.chatProperties.destroy();"
+                                ],
+                                "name": "tap"
+                            },
+                            "designerId": "b020fa40-0300-4371-8d9f-d2ca1e47d61c"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|uiInterfaceName": "untitled-ui-2",
+                        "docked": null,
+                        "id": "removeFromFriendsButton4",
+                        "itemId": "logoutButton1",
+                        "locales": [
+                            "{'text':'labels.leavechat'}"
+                        ],
+                        "margin": "0 0 0 5",
+                        "text": null,
+                        "ui": "untitled-ui-2",
+                        "width": null
+                    },
+                    "configAlternates": {
+                        "locales": "array",
+                        "style": "object"
+                    },
+                    "designerId": "d09e8fd9-ac49-484f-8dee-428d9cf14182",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "locales",
+                            "type": "string"
+                        }
+                    ],
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onRemoveFromFriendsButton2Tap11",
+                                "implHandler": [
+                                    "var dataController=VKM.app.getController('DataLoader');\r",
+                                    "var url='https://api.vk.com/method/messages.removeChatUser';\r",
+                                    "var params=\r",
+                                    "    {\r",
+                                    "        v:'5.4',\r",
+                                    "        user_id:VKM.app.globals.authData['user_id'],\r",
+                                    "        chat_id:VKM.app.globals.chat.currentChatId,\r",
+                                    "        access_token:VKM.app.globals.authData['access_token']\r",
+                                    "\r",
+                                    "    };\r",
+                                    "var controller=VKM.app.getController('Dialogues');\r",
+                                    "controller.chatProperties.destroy();\r",
+                                    "dataController.go(url,params);\r",
+                                    "\r",
+                                    "\r",
+                                    "// VKM.app.globals.authData.access_token=null;\r",
+                                    "// VKM.app.globals.authData.expiresTime=null;\r",
+                                    "// var settingsStore=Ext.getStore('settings');\r",
+                                    "// var record=new VKM.model.localConfig({id:'expires_in',value:null});\r",
+                                    "// settingsStore.add(record);\r",
+                                    "// record.save();\r",
+                                    "// record=new VKM.model.localConfig({id:'access_token',value:null});\r",
+                                    "// settingsStore.add(record);\r",
+                                    "// record.save();\r",
+                                    "// record=new VKM.model.localConfig({id:'user_id',value:null});\r",
+                                    "// settingsStore.add(record);\r",
+                                    "// record.save();\r",
+                                    "// record=new VKM.model.localConfig({id:'expiresTime',value:null});\r",
+                                    "// settingsStore.add(record);\r",
+                                    "// record.save();\r",
+                                    "// settingsStore.sync();\r",
+                                    "// Ext.create('VKM.view.FirstScreen', {fullscreen: true}).show();\r",
+                                    "// //window.close();\r",
+                                    ""
+                                ],
+                                "name": "tap"
+                            },
+                            "designerId": "b2d66811-2518-46f2-8c0c-a9eacd771b6d"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|uiInterfaceName": "decline",
+                        "docked": null,
+                        "id": "removeFromFriendsButton5",
+                        "itemId": "logoutButton2",
+                        "locales": [
+                            "{'text':'labels.Delete'}"
+                        ],
+                        "margin": "0 0 0 5",
+                        "text": null,
+                        "ui": "decline",
+                        "width": null
+                    },
+                    "configAlternates": {
+                        "locales": "array",
+                        "style": "object"
+                    },
+                    "designerId": "5cf51f67-451f-4d7a-9510-72fcc99f27b1",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "locales",
+                            "type": "string"
+                        }
+                    ],
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onRemoveFromFriendsButton2Tap111",
+                                "implHandler": [
+                                    "var MB = Ext.MessageBox;\r",
+                                    "Ext.apply(MB, {\r",
+                                    "    YES: { text:ux.locale.Manager.get('labels.Yes'), itemId: 'yes', ui: 'action' },\r",
+                                    "    NO: { text: ux.locale.Manager.get('labels.No'), itemId: 'no' }\r",
+                                    "});\r",
+                                    "Ext.apply(MB, {\r",
+                                    "    YESNO: [MB.NO, MB.YES]\r",
+                                    "});\r",
+                                    "\r",
+                                    "Ext.Msg.confirm(\"\",ux.locale.Manager.get('labels.DeleteMessagesConfirm'), function(e){\r",
+                                    "    if(e == 'yes'){\r",
+                                    "        var controller=VKM.app.getController('Dialogues');\r",
+                                    "        var dataController=VKM.app.getController('DataLoader');\r",
+                                    "        var url='https://api.vk.com/method/messages.deleteDialog';\r",
+                                    "        var params=\r",
+                                    "            {\r",
+                                    "                v:'5.4',\r",
+                                    "                //user_id:VKM.app.globals.chat.currentUserId,\r",
+                                    "                chat_id:VKM.app.globals.chat.currentChatId,\r",
+                                    "                access_token:VKM.app.globals.authData['access_token']\r",
+                                    "            };\r",
+                                    "        VKM.app.globals.chat=null;\r",
+                                    "        controller.getMessagesPanel().setActiveItem(0);\r",
+                                    "\r",
+                                    "        controller.chatProperties.destroy();\r",
+                                    "        dataController.go(url,params,controller.deleteMessages);\r",
+                                    "\r",
+                                    "\r",
+                                    "    }\r",
+                                    "})\r",
+                                    ""
+                                ],
+                                "name": "tap"
+                            },
+                            "designerId": "577262ea-81c4-4170-8d78-850ebc99cc51"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,117 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Docs",
+        "model": null,
+        "storeId": "Docs"
+    },
+    "designerId": "eee4432c-f61a-4819-9d43-3f336e9d4f05",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "did"
+            },
+            "designerId": "02aa2f33-e430-4a11-a656-d439b61d4b07"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "owner_id"
+            },
+            "designerId": "c174d104-0802-4dfd-8398-2ab3e4aa4d7b"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "title"
+            },
+            "designerId": "92f039f6-d4ac-4e46-8bfc-61a663c7cd63"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "size"
+            },
+            "designerId": "4ee59dcb-2dbb-424d-bcc1-d2256ad79bca"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "ext"
+            },
+            "designerId": "20cc423f-eebc-4be4-877f-ceea4458538c"
+        },
+        {
+            "type": "Ext.data.proxy.Rest",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "limitParam": "count",
+                "startParam": "offset",
+                "url": "https://api.vk.com/method/docs.get"
+            },
+            "designerId": "eda7bc21-8301-472e-8906-9b5067ed15fd",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "response.items",
+                        "totalProperty": "response.count"
+                    },
+                    "designerId": "02995dd4-73b4-4b0e-b399-fbf3764ae2e7"
+                }
+            ]
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "url"
+            },
+            "designerId": "08dd5253-ca9f-4efe-b90b-6c7a1814df1d"
+        }
+    ]
+}

@@ -1,0 +1,150 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Images"
+    },
+    "designerId": "0ce09bd9-a173-49d9-8c10-0555442140b7",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "photo_130"
+            },
+            "designerId": "9866a4ed-a675-4b50-86b5-a620431037cf",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "id",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "defaultValue": [
+                    "false"
+                ],
+                "name": "selected"
+            },
+            "designerId": "078f0753-7369-458d-a820-26c6d4843d80"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "id"
+            },
+            "designerId": "246c9f96-3e60-42ad-b786-3fad0b7bcf60"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "owner_id"
+            },
+            "designerId": "6e3fa738-3b76-4b57-b1ef-0c408db9cdef"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "image"
+            },
+            "designerId": "981bad4c-770f-4e45-b4c2-e181ecea09f7",
+            "cn": [
+                {
+                    "type": "fixedfunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|params": [
+                            "v",
+                            "rec"
+                        ],
+                        "fn": "convert",
+                        "implHandler": [
+                            "return (rec.get('photo_130'));"
+                        ]
+                    },
+                    "designerId": "3fef3b5b-0857-4709-9b7d-95171bd3fcb5"
+                }
+            ]
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "title"
+            },
+            "designerId": "585b00c9-9469-4116-89a4-e64314956053",
+            "cn": [
+                {
+                    "type": "fixedfunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|params": [
+                            "v",
+                            "rec"
+                        ],
+                        "fn": "convert",
+                        "implHandler": [
+                            "return(\"\");"
+                        ]
+                    },
+                    "designerId": "d15d1ad0-76cf-4104-ac0b-00554cfe7e72"
+                }
+            ]
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "photo_604"
+            },
+            "designerId": "bda452a9-ffe0-4c41-9fa3-2269f7235f11"
+        }
+    ]
+}

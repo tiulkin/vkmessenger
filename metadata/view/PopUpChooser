@@ -1,0 +1,39 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "centered": true,
+        "designer|userAlias": "popupchooser",
+        "designer|userClassName": "PopUpChooser",
+        "height": "100%",
+        "hideAnimation": [
+            "{\r",
+            "    type: 'popOut',\r",
+            "    duration: 250,\r",
+            "    easing: 'ease-out'\r",
+            "}\r",
+            ""
+        ],
+        "hideOnMaskTap": true,
+        "itemId": "popUpChooser",
+        "layout": "fit",
+        "modal": true,
+        "showAnimation": [
+            "{\r",
+            "    type: 'popIn',\r",
+            "    duration: 250,\r",
+            "    easing: 'ease-out'\r",
+            "}"
+        ],
+        "width": "100%"
+    },
+    "configAlternates": {
+        "hideAnimation": "object",
+        "showAnimation": "object"
+    },
+    "designerId": "5adaf922-9331-48ca-bd36-5e3bd6bd481e"
+}

@@ -1,0 +1,478 @@
+{
+    "type": "Ext.dataview.component.ListItem",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "baseCls": null,
+        "designer|userAlias": "dialogueitem",
+        "designer|userClassName": "DialogueItem",
+        "itemCls": "x-list-item",
+        "layout": "vbox",
+        "padding": "5 10 10 10"
+    },
+    "designerId": "3ab58453-8fb4-4593-8fa2-939f7ea2fe4d",
+    "cn": [
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "record"
+                ],
+                "fn": "updateRecord",
+                "implHandler": [
+                    "if (!record) return\r",
+                    "//console.log(record);\r",
+                    "if(!Ext.getStore('Users').getById(VKM.app.globals.authData.user_id)) return\r",
+                    "\r",
+                    "\r",
+                    "if(record.get('did')!=0)\r",
+                    "{\r",
+                    "    var user=Ext.getStore('Users').getById(record.get('user_id'));\r",
+                    "    var name=record.get('name');\r",
+                    "    if(!user)\r",
+                    "    {\r",
+                    "        console.log(record);\r",
+                    "        return\r",
+                    "    }\r",
+                    "\r",
+                    "    if(!name)\r",
+                    "    {\r",
+                    "        name=user.get('first_name')+' '+user.get('last_name');\r",
+                    "        var userData=record.getData();\r",
+                    "        userData.name=name;\r",
+                    "        record.set(userData);\r",
+                    "        // record.save();\r",
+                    "\r",
+                    "    };\r",
+                    "\r",
+                    "    //this.down('#avatar').setSrc(user.get('photo_50'));\r",
+                    "\r",
+                    "    if (!VKM.app.globals.me)\r",
+                    "    {\r",
+                    "\r",
+                    "        VKM.app.globals.me=Ext.getStore('Users').getById(VKM.app.globals.authData.user_id).getData();;\r",
+                    "    }\r",
+                    "\r",
+                    "    var isOnlineCls=\"\";\r",
+                    "    if (user.get('online')&&!record.get('chat_id'))\r",
+                    "    {\r",
+                    "        isOnlineCls='class=\"userOnline\"';\r",
+                    "    }\r",
+                    "    else\r",
+                    "    {\r",
+                    "        isOnlineCls='class=\"userOffline\"';\r",
+                    "    }\r",
+                    "\r",
+                    "\r",
+                    "    if (record.get('chat_id'))\r",
+                    "    {\r",
+                    "        this.down('#avatar').setHidden(true);\r",
+                    "        var owner=Ext.getStore('Users').getById(record.get('admin_id'));\r",
+                    "        var members=record.get('chat_active');\r",
+                    "        if (members[0])\r",
+                    "        {\r",
+                    "            var member=Ext.getStore('Users').getById(members[0]);\r",
+                    "            this.down('#avatar1').setSrc(member.get('photo_50'));\r",
+                    "        }\r",
+                    "        if (members[1])\r",
+                    "        {\r",
+                    "            var member=Ext.getStore('Users').getById(members[1]);\r",
+                    "            this.down('#avatar2').setSrc(member.get('photo_50'));\r",
+                    "        }\r",
+                    "        if (members[2])\r",
+                    "        {\r",
+                    "            var member=Ext.getStore('Users').getById(members[2]);\r",
+                    "            this.down('#avatar3').setSrc(member.get('photo_50'));\r",
+                    "        }\r",
+                    "        if (members[3])\r",
+                    "        {\r",
+                    "            var member=Ext.getStore('Users').getById(members[3]);\r",
+                    "            this.down('#avatar4').setSrc(member.get('photo_50'));\r",
+                    "        }\r",
+                    "        this.down('#avatar0').setHidden(false);\r",
+                    "        this.down('#avatar0').setSrc(user.get('photo_50'));\r",
+                    "        this.down('#name').setHtml('<span '+isOnlineCls+'>'+Ext.String.ellipsis(record.get('title'),23)+'</span>'); //+isOnline);\r",
+                    "        //this.down('#name').setHtml('<span '+isOnlineCls+'>'+Ext.String.ellipsis(user.get('first_name')+' '+user.get('last_name'),23)+'</span>'); //+isOnline);\r",
+                    "\r",
+                    "    }\r",
+                    "    else\r",
+                    "    {\r",
+                    "        this.down('#chatImages').setHidden(true);\r",
+                    "        this.down('#avatar').setSrc(user.get('photo_50'));\r",
+                    "        this.down('#avatar').setHidden(false);\r",
+                    "        if (record.get('out'))\r",
+                    "        {\r",
+                    "            this.down('#avatar0').setHidden(false);\r",
+                    "            this.down('#avatar0').setSrc(VKM.app.globals.me.photo_50);\r",
+                    "        }\r",
+                    "        else\r",
+                    "        {\r",
+                    "            this.down('#avatar0').setHidden(true);\r",
+                    "        }\r",
+                    "        this.down('#name').setHtml('<span '+isOnlineCls+'>'+Ext.String.ellipsis(name,23)+'</span>'); //+isOnline);\r",
+                    "\r",
+                    "    }\r",
+                    "\r",
+                    "    //\r",
+                    "\r",
+                    "\r",
+                    "\r",
+                    "\r",
+                    "    if (record.get('date'))\r",
+                    "    {\r",
+                    "        var date=new Date(record.get('date')*1000);\r",
+                    "        var currentDate=new Date(Ext.DateExtras.now());\r",
+                    "        var messageDate=date;\r",
+                    "\r",
+                    "        this.down('#datetime').setHtml(moment(messageDate).fromNow());\r",
+                    "    }\r",
+                    "\r",
+                    "    var messageBody='';\r",
+                    "    if(record.get('body'))\r",
+                    "    {\r",
+                    "        messageBody=Ext.String.ellipsis(record.get('body'),70,true)\r",
+                    "    }\r",
+                    "    if(record.get('emoji'))\r",
+                    "    {\r",
+                    "        messageBody=VKM.app.smiles(messageBody);\r",
+                    "        //    messageBody='<div>'+messageBody+'</div>';\r",
+                    "\r",
+                    "    }\r",
+                    "\r",
+                    "    var photo='';\r",
+                    "    var video='';\r",
+                    "    var document='';\r",
+                    "    var audio='';\r",
+                    "    var map='';\r",
+                    "    var fwd='';\r",
+                    "\r",
+                    "    if(record.get('fwd_messages'))\r",
+                    "    {\r",
+                    "        fwd='<span class=\"messageIconCls\"></span>';\r",
+                    "    }\r",
+                    "    if(record.get('geo'))\r",
+                    "    {\r",
+                    "        map='<span class=\"locationIconCls\"></span>';        \r",
+                    "    }\r",
+                    "    if(record.get('attachments'))\r",
+                    "    {\r",
+                    "        var attachments=record.get('attachments')\r",
+                    "        for (var i=0;i<attachments.length;i++)\r",
+                    "        {\r",
+                    "            if (attachments[i].type=='photo')\r",
+                    "            {\r",
+                    "                photo='<span class=\"photoIconCls\"></span>';\r",
+                    "            }\r",
+                    "            if (attachments[i].type=='video')\r",
+                    "            {\r",
+                    "                video='<span class=\"videoIconCls\"></span>';\r",
+                    "            }\r",
+                    "            if (attachments[i].type=='audio')\r",
+                    "            {\r",
+                    "                audio='<span class=\"musicIconCls\"></span>';\r",
+                    "            }\r",
+                    "            if (attachments[i].type=='map')\r",
+                    "            {\r",
+                    "                map='<span class=\"mapIconCls\"></span>';\r",
+                    "            }\r",
+                    "            if (attachments[i].type=='doc')\r",
+                    "            {\r",
+                    "                document='<span class=\"documentIconCls\"></span>';\r",
+                    "            }\r",
+                    "        }\r",
+                    "\r",
+                    "\r",
+                    "    }\r",
+                    "\r",
+                    "    if (record.get('read_state')==0)\r",
+                    "    {\r",
+                    "        this.down('#body').addCls('unreadMessage');\r",
+                    "    }\r",
+                    "    else\r",
+                    "    {\r",
+                    "        this.down('#body').removeCls('unreadMessage');\r",
+                    "    }\r",
+                    "    this.down('#body').setHtml(fwd+map+audio+video+document+photo+messageBody);//this.down('#avatar').setSrc(record.get('image'));\r",
+                    "    //this.down('#completion').setPercentFunded(record.get('percent_funded'));\r",
+                    "}\r",
+                    "else\r",
+                    "{\r",
+                    "    this.down('#name').setHtml(ux.locale.Manager.get('labels.loadmore'));\r",
+                    "}"
+                ]
+            },
+            "designerId": "c7e07d87-b5a1-4dbd-9cf2-b62bca7f561a"
+        },
+        {
+            "type": "Ext.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "multiChat"
+                ],
+                "docked": "left",
+                "height": 64,
+                "itemId": "chatImages",
+                "layout": "vbox"
+            },
+            "designerId": "ecb020e3-5c6a-4da5-b4f4-4715f7425ec8",
+            "cn": [
+                {
+                    "type": "Ext.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout": "hbox",
+                        "layout|flex": 1
+                    },
+                    "designerId": "ed312aa6-6ef6-4d46-93e5-f2b2aa156d62",
+                    "cn": [
+                        {
+                            "type": "Ext.Img",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "docked": null,
+                                "itemId": "avatar1",
+                                "margin": 2,
+                                "style": [
+                                    "style=\"border-radius: 50% 50% 50% 50%\""
+                                ],
+                                "width": 30
+                            },
+                            "configAlternates": {
+                                "style": "object"
+                            },
+                            "designerId": "650ea83c-6fe7-4b63-84f1-c874b2e1f4ce"
+                        },
+                        {
+                            "type": "Ext.Img",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "docked": null,
+                                "itemId": "avatar2",
+                                "margin": 2,
+                                "style": [
+                                    "style=\"border-radius: 50% 50% 50% 50%\""
+                                ],
+                                "width": 30
+                            },
+                            "configAlternates": {
+                                "style": "object"
+                            },
+                            "designerId": "9fd5d8ac-bb13-492d-86ce-531c8d98f2b0"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout": "hbox",
+                        "layout|flex": 1
+                    },
+                    "designerId": "83e4de96-2994-4553-8904-b0c30791f8a6",
+                    "cn": [
+                        {
+                            "type": "Ext.Img",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "docked": null,
+                                "itemId": "avatar3",
+                                "margin": 2,
+                                "style": [
+                                    "style=\"border-radius: 50% 50% 50% 50%\""
+                                ],
+                                "width": 30
+                            },
+                            "configAlternates": {
+                                "style": "object"
+                            },
+                            "designerId": "1197e754-62eb-4218-bfc3-76ec1f11f840"
+                        },
+                        {
+                            "type": "Ext.Img",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "docked": null,
+                                "itemId": "avatar4",
+                                "margin": 2,
+                                "style": [
+                                    "style=\"border-radius: 50% 50% 50% 50%\""
+                                ],
+                                "width": 30
+                            },
+                            "configAlternates": {
+                                "style": "object"
+                            },
+                            "designerId": "c2c73880-0f9f-45da-8d30-5ea67f84374c"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.Img",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "left",
+                "itemId": "avatar",
+                "margin": 2,
+                "style": [
+                    "style=\"border-radius: 50% 50% 50% 50%\""
+                ],
+                "width": 60
+            },
+            "configAlternates": {
+                "style": "object"
+            },
+            "designerId": "47cc597b-1e62-4c06-8dd1-b571811e27ca"
+        },
+        {
+            "type": "Ext.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "multiChat"
+                ],
+                "container|align": "start",
+                "layout": "hbox",
+                "margin": 0
+            },
+            "designerId": "9be1d40b-2276-4d81-aa64-1ddfb2c009a1",
+            "cn": [
+                {
+                    "type": "Ext.Component",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "name"
+                        ],
+                        "html": null,
+                        "itemId": "name",
+                        "layout|flex": 1
+                    },
+                    "designerId": "62652e70-0794-41f7-a021-9cb92309b250"
+                },
+                {
+                    "type": "Ext.Component",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "x-item-datetime"
+                        ],
+                        "docked": null,
+                        "html": null,
+                        "itemId": "datetime"
+                    },
+                    "designerId": "114a0058-c436-46ae-b4ad-f54a1424caa6"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "multiChat"
+                ],
+                "container|align": "start",
+                "layout": "hbox",
+                "margin": 0
+            },
+            "designerId": "8fe4977a-a68b-4f7f-844f-772cba92a5cc",
+            "cn": [
+                {
+                    "type": "Ext.Img",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "docked": "left",
+                        "itemId": "avatar0",
+                        "margin": 2,
+                        "style": [
+                            "style=\"border-radius: 50% 50% 50% 50%\""
+                        ],
+                        "width": 30
+                    },
+                    "configAlternates": {
+                        "style": "object"
+                    },
+                    "designerId": "6ffb587a-edcf-4cb8-88bc-06f61f381896"
+                },
+                {
+                    "type": "Ext.Component",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "html": null,
+                        "itemId": "body",
+                        "layout|flex": 1,
+                        "maxWidth": 300
+                    },
+                    "designerId": "4bc9e3ce-5e39-4ddb-a971-3fbda37ceabd"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "DialoguesSearchResult",
+        "model": "Message",
+        "storeId": "DialoguesSearchResult"
+    },
+    "designerId": "13f3005c-1592-44d3-b626-78fa65187748",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Memory",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "designerId": "3711524b-fa13-435a-b89f-d09455615afe"
+        },
+        {
+            "type": "Ext.util.Sorter",
+            "reference": {
+                "name": "sorters",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "direction": "DESC",
+                "property": "date"
+            },
+            "designerId": "93d30935-28b2-4c78-9649-427b06c25f1e"
+        }
+    ]
+}

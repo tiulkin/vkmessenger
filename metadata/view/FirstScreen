@@ -1,0 +1,386 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "container|align": "stretchmax",
+        "container|pack": "center",
+        "designer|userAlias": null,
+        "designer|userClassName": "FirstScreen",
+        "fullscreen": true,
+        "itemId": "firstScreen",
+        "layout": "vbox",
+        "style": null
+    },
+    "configAlternates": {
+        "style": "object"
+    },
+    "designerId": "f122b302-f33f-44cd-90af-3a9292063adf",
+    "cn": [
+        {
+            "type": "Ext.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "container|align": "center",
+                "container|pack": "center",
+                "docked": null,
+                "layout": "vbox",
+                "layout|flex": 4,
+                "style": [
+                    "{\r",
+                    "    \"background\":\"url(resources/images/Main.png) no-repeat center center fixed\",\r",
+                    "    \"-webkit-background-size\": \"cover\", /* For WebKit*/        \r",
+                    "    \"background-size\": \"cover\"\r",
+                    "  //  \"background-size\": \"100%\";\r",
+                    "}"
+                ]
+            },
+            "configAlternates": {
+                "style": "object"
+            },
+            "designerId": "89721a75-b3bc-4539-9f4d-0648dc042077",
+            "cn": [
+                {
+                    "type": "Ext.Spacer",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "designerId": "67485c74-6212-4ecf-b134-bb3b0fa6952f"
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|uiInterfaceName": "action",
+                        "docked": null,
+                        "height": 50,
+                        "itemId": "signin",
+                        "locales": [
+                            "{\"text\":\"labels.Login\"}"
+                        ],
+                        "style": [
+                            "{\r",
+                            "    \"margin-bottom\":\"3em\"\r",
+                            "}"
+                        ],
+                        "text": null,
+                        "ui": "action",
+                        "width": "80%"
+                    },
+                    "configAlternates": {
+                        "style": "object",
+                        "locales": "array"
+                    },
+                    "designerId": "5a970700-7fb2-49d7-9463-8b2ecad0064a",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "locales",
+                            "type": "string"
+                        }
+                    ],
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|params": [
+                                    "button",
+                                    "e"
+                                ],
+                                "fn": "handler",
+                                "implHandler": [
+                                    "var url='https://oauth.vk.com/authorize?client_id=3967300&scope=notify,friends,photos,audio,video,docs,notes,status,messages,notifications&redirect_uri=https://oauth.vk.com/blank.html&display=mobile&response_type=token';\r",
+                                    "\r",
+                                    "VKM.app.authenticate=function () {\r",
+                                    "    window.authCount = 0;\r",
+                                    "    var name=VKM.app.uuid();\r",
+                                    "    window.authWin = window.open(url, name,\"\",true);\r",
+                                    "    VKM.app.globals.loginWindow=window.authWin;\r",
+                                    "    VKM.app.watchOAuth();\r",
+                                    "\r",
+                                    "    return;\r",
+                                    "};\r",
+                                    "\r",
+                                    "VKM.app.watchOAuth= function () {\r",
+                                    "    window.intv = self.setInterval(function () {\r",
+                                    "        window.authCount = window.authCount + 1;\r",
+                                    "        if (window.authWin && window.authWin.location) {\r",
+                                    "            var currentURL = window.authWin.location.href;\r",
+                                    "            var inCallback = currentURL.indexOf(\"access_token=\");\r",
+                                    "\r",
+                                    "            if (inCallback >= 0) {\r",
+                                    "                var authData = currentURL.substr(currentURL.indexOf(\"#\"));\r",
+                                    "                window.clearInterval(intv);\r",
+                                    "                window.authWin.close();\r",
+                                    "                VKM.app.globals.authData=VKM.app.getJsonFromUrl(authData);\r",
+                                    "                VKM.app.globals.authData['_id']='authData';\r",
+                                    "                VKM.app.globals.authData.expiresTime=Ext.DateExtras.now()+1000*parseInt(VKM.app.globals.authData.expires_in);\r",
+                                    "                var settingsStore=Ext.getStore('settings');\r",
+                                    "                var record=new VKM.model.localConfig({id:'expires_in',value:VKM.app.globals.authData['expires_in']});\r",
+                                    "                settingsStore.add(record);\r",
+                                    "                record.save();\r",
+                                    "                record=new VKM.model.localConfig({id:'access_token',value:VKM.app.globals.authData['access_token']});\r",
+                                    "                settingsStore.add(record);\r",
+                                    "                record.save();\r",
+                                    "                record=new VKM.model.localConfig({id:'user_id',value:VKM.app.globals.authData['user_id']});\r",
+                                    "                settingsStore.add(record);\r",
+                                    "                record.save();\r",
+                                    "                record=new VKM.model.localConfig({id:'expiresTime',value:VKM.app.globals.authData['expiresTime']});\r",
+                                    "                settingsStore.add(record);\r",
+                                    "                record.save();\r",
+                                    "                settingsStore.sync();\r",
+                                    "                console.log(settingsStore);\r",
+                                    "                VKM.app.getController('Login').go();\r",
+                                    "\r",
+                                    "            }\r",
+                                    "        }\r",
+                                    "        if (window.authCount > 600) {\r",
+                                    "            //alert('5 minutes login time out');\r",
+                                    "            window.authCount  =0;\r",
+                                    "            window.clearInterval(intv);\r",
+                                    "            window.authWin.close();\r",
+                                    "        }\r",
+                                    "    }, 500);\r",
+                                    "}\r",
+                                    "VKM.app.authenticate();\r",
+                                    "\r",
+                                    "// VKM.app.watchOAuth= function () {\r",
+                                    "//     VKM.app.globals.int = self.setInterval(function () {\r",
+                                    "//         //         console.log(VKM.app.globals.authCount);\r",
+                                    "//         //         console.log(VKM.app.globals.authWin);\r",
+                                    "//         //         console.log(VKM.app.globals.authWin.location);\r",
+                                    "//         //         console.log(VKM.app.globals.authWin.location.href);\r",
+                                    "//         VKM.app.globals.authCount = VKM.app.globals.authCount + 1;\r",
+                                    "\r",
+                                    "//         if (VKM.app.globals.authWin) {\r",
+                                    "\r",
+                                    "//             var currentURL='';\r",
+                                    "//             if(tizen)\r",
+                                    "//             {\r",
+                                    "//                 currentURL = VKM.app.globals.authWin.uri;\r",
+                                    "//             }\r",
+                                    "//             else\r",
+                                    "//             {\r",
+                                    "//                 currentURL = VKM.app.globals.authWin.location.href;\r",
+                                    "//             }\r",
+                                    "//             console.log(currentURL);\r",
+                                    "//             VKM.app.globals.authWin.uri;\r",
+                                    "//             VKM.app.globals.authWin.uri;\r",
+                                    "//             var inCallback = currentURL.indexOf(\"access_token=\");\r",
+                                    "\r",
+                                    "//             if (inCallback >= 0) {\r",
+                                    "//                 var authData = currentURL.substr(currentURL.indexOf(\"#\"));\r",
+                                    "//                 window.clearInterval(int)\r",
+                                    "//                 VKM.app.globals.authWin.destroy();\r",
+                                    "//                 VKM.app.globals.authData=VKM.app.getJsonFromUrl(authData);\r",
+                                    "//                 VKM.app.globals.authData['_id']='authData';\r",
+                                    "\r",
+                                    "//                 VKM.app.globals.authData.expiresTime=Ext.DateExtras.now()+1000*parseInt(VKM.app.globals.authData.expires_in);\r",
+                                    "//                 VKM.app.globals.localDB.get('authData',function(err, doc){\r",
+                                    "//                     if(doc)\r",
+                                    "//                     {\r",
+                                    "//                         doc.expires_in=VKM.app.globals.authData['expires_in'];\r",
+                                    "//                         doc.access_token = VKM.app.globals.authData['access_token'];\r",
+                                    "//                         doc.user_id = VKM.app.globals.authData['user_id'];\r",
+                                    "//                         doc.expiresTime = VKM.app.globals.authData['expiresTime'];\r",
+                                    "\r",
+                                    "//                     }\r",
+                                    "//                     else\r",
+                                    "//                     {\r",
+                                    "//                         doc={\r",
+                                    "//                             _id:'authData',\r",
+                                    "//                             expires_in:VKM.app.globals.authData['expires_in'],\r",
+                                    "//                             access_token:VKM.app.globals.authData['access_token'],\r",
+                                    "//                             user_id : VKM.app.globals.authData['user_id'],\r",
+                                    "//                             expiresTime : VKM.app.globals.authData['expiresTime']\r",
+                                    "//                         }\r",
+                                    "//                     }\r",
+                                    "//                     VKM.app.globals.localDB.put(doc,function(err, doc){\r",
+                                    "//                         VKM.app.getController('Login').go();\r",
+                                    "//                     })\r",
+                                    "//                 })\r",
+                                    "\r",
+                                    "//                 // process here\r",
+                                    "//             }\r",
+                                    "//         }\r",
+                                    "//         if (VKM.app.globals.authCount > 600) {\r",
+                                    "//             //alert('5 minutes login time out');\r",
+                                    "//             VKM.app.globals.authCount  =0;\r",
+                                    "//             VKM.app.globals.clearInterval(VKM.app.globals.int)\r",
+                                    "//             VKM.app.globals.authWin.destroy();\r",
+                                    "//             //VKM.app.globals.authWin.close();\r",
+                                    "//         }\r",
+                                    "//     }, 500);\r",
+                                    "// }\r",
+                                    "\r",
+                                    "// VKM.app.authenticate=function () {\r",
+                                    "//     VKM.app.globals.authCount = 0;\r",
+                                    "\r",
+                                    "//\r",
+                                    "//         VKM.app.globals.authWin = appControl;\r",
+                                    "//         //         var service = new tizen.ApplicationService('http:tizen.org/appcontrol/operation/default', url);\r",
+                                    "//         //         tizen.application.launchService(service, 'org.tizen.browser', function() {\r",
+                                    "//         //             tizen.logger.info(\"browser launched\");\r",
+                                    "//         //         }, function() {\r",
+                                    "//         //             tizen.view.showPopup(\"Unable to launch browser\");\r",
+                                    "//     }\r",
+                                    "\r",
+                                    "// }\r",
+                                    "// //VKM.app.watchOAuth();\r",
+                                    "\r",
+                                    "\r",
+                                    ""
+                                ]
+                            },
+                            "designerId": "5f127226-ef76-4cc4-a822-e60cd0a7e105"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "container|align": "center",
+                "container|pack": "center",
+                "html": "",
+                "layout": "vbox",
+                "layout|flex": 1
+            },
+            "designerId": "e6eca590-770f-4c67-b19c-8a1a897020a6",
+            "cn": [
+                {
+                    "type": "Ext.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|align": "center",
+                        "container|pack": "center",
+                        "layout": "vbox",
+                        "margin": null
+                    },
+                    "designerId": "f0ab6150-d9cb-48a0-b167-6964bc8f9764",
+                    "cn": [
+                        {
+                            "type": "Ext.Component",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "html": null,
+                                "itemId": "mycomponent",
+                                "layout|flex": null,
+                                "padding": "10px",
+                                "style": [
+                                    "{\"color\":\"#345777\",\"font-weight\":\"bold\",\"font-size\":\"1.2em\",\"text-decoration\":\"underline\"}"
+                                ]
+                            },
+                            "configAlternates": {
+                                "style": "object"
+                            },
+                            "designerId": "c6155183-034c-4b7b-a72b-8ea34b1068c8",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onMycomponentPainted",
+                                        "implHandler": [
+                                            "element.setHtml(ux.locale.Manager.get('labels.Signup'));\r",
+                                            "console.log(ux.locale.Manager.get('labels.Signup'));\r",
+                                            "element.dom.addEventListener('click',function(e){\r",
+                                            "    var appControl = new tizen.ApplicationControl(\"http://tizen.org/appcontrol/operation/view\", \"http://m.vk.com/join\");\r",
+                                            "    tizen.application.launchAppControl(appControl, null,\r",
+                                            "                                       function() {\r",
+                                            "                                           console.log(\"browser opened\");\r",
+                                            "\r",
+                                            "                                       },\r",
+                                            "                                       function(e) { console.log(\"browser error: \" + e.message); }\r",
+                                            "                                      );\r",
+                                            "\r",
+                                            "\r",
+                                            "})"
+                                        ],
+                                        "name": "painted"
+                                    },
+                                    "designerId": "03f7b858-9982-4f51-80c8-7d6c8d72e5ce"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.Component",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "html": null,
+                                "itemId": "mycomponent1",
+                                "layout|flex": null,
+                                "padding": "10px",
+                                "style": [
+                                    "{\"font-size\":\"0.8em\",\"text-align\":\"center\"}"
+                                ]
+                            },
+                            "configAlternates": {
+                                "style": "object"
+                            },
+                            "designerId": "1ec2e29a-7af1-4450-8083-38b9f3368e34",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onMycomponent1Painted",
+                                        "implHandler": [
+                                            "element.setHtml(ux.locale.Manager.get('labels.youcanmessage'))"
+                                        ],
+                                        "name": "painted"
+                                    },
+                                    "designerId": "fe34a498-aaa4-4d4d-9bb1-610bb4986046"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

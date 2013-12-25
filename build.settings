@@ -1,0 +1,66 @@
+{
+    "webBuild": {
+        "environment": "production",
+        "clean": "on",
+        "publishPath": "C:/Users/oleg_000/Documents/Projects/idea/noerp-client/assets/www"
+    },
+    "androidBuild": {
+        "applicationName": "vkm",
+        "applicationId": "com.mycompany.myAppID",
+        "androidAPILevel": "10",
+        "versionString": "1.0",
+        "versionCode": "1",
+        "sdkPath": "C:/android",
+        "permissions": [
+            "INTERNET",
+            "ACCESS_NETWORK_STATE",
+            "CAMERA",
+            "VIBRATE",
+            "ACCESS_FINE_LOCATION",
+            "ACCESS_COARSE_LOCATION",
+            "CALL_PHONE"
+        ],
+        "icon": {
+            "36": "resources/icons/Icon_Android36.png",
+            "48": "resources/icons/Icon_Android48.png",
+            "72": "resources/icons/Icon~ipad.png"
+        },
+        "orientation": [
+            "portrait",
+            "portraitUpsideDown",
+            "landscapeLeft",
+            "landscapeRight"
+        ],
+        "certificatePassword": "",
+        "certificatePath": "",
+        "clean": false
+    },
+    "androidSimulate": {
+        "applicationName": "vkm",
+        "applicationId": "com.mycompany.myAppID",
+        "androidAPILevel": "10",
+        "versionString": "1.0",
+        "versionCode": "1",
+        "sdkPath": "C:/android",
+        "permissions": [
+            "INTERNET",
+            "ACCESS_NETWORK_STATE",
+            "CAMERA",
+            "VIBRATE",
+            "ACCESS_FINE_LOCATION",
+            "ACCESS_COARSE_LOCATION",
+            "CALL_PHONE"
+        ],
+        "icon": {
+            "36": "resources/icons/Icon_Android36.png",
+            "48": "resources/icons/Icon_Android48.png",
+            "72": "resources/icons/Icon~ipad.png"
+        },
+        "orientation": [
+            "portrait",
+            "portraitUpsideDown",
+            "landscapeLeft",
+            "landscapeRight"
+        ]
+    }
+}

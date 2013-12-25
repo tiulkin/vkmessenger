@@ -1,0 +1,13 @@
+{
+    "type": "jsresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "js9",
+        "url": "compatibility.js "
+    },
+    "designerId": "5a113d6b-fd7c-4a6c-b41a-3009b28046ac"
+}

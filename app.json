@@ -1,0 +1,88 @@
+{
+   "name": "VKM",
+   "indexHtmlPath": "index.html",
+   "url": null,
+   "js": [
+      {
+         "path": "touch/sencha-touch.js",
+         "x-bootstrap": true
+      },
+      {
+         "path": "bootstrap.js",
+         "x-bootstrap": true
+      },
+      {
+         "path": "app.js",
+         "bundle": true,
+         "update": "delta"
+      },
+      {
+         "path": "overrides.js"
+      },
+      {
+         "path": "app/override/data/proxy/LocalStorage.js"
+      },
+      {
+         "path": "app/override/dataview/List.js"
+      },
+      {
+         "path": "app/override/plugin/PullRefresh.js"
+      },
+      {
+         "path": "app/override/data/proxy/Rest.js"
+      },
+      {
+         "path": "medium.js"
+      },
+      {
+         "path": "pdf.js "
+      },
+      {
+         "path": "pdf.worker.js "
+      },
+      {
+         "path": "moment.js"
+      },
+      {
+         "path": "compatibility.js "
+      }
+   ],
+   "css": [
+      {
+         "update": "delta",
+         "platform": [
+            "phone",
+            "tablet",
+            "desktop"
+         ],
+         "theme": "Default",
+         "path": "theme/sencha-touch-06c678be-92ea-47ec-9a8d-3e500a57f658.css",
+         "_architect_active_theme": true
+      },
+      {
+         "path": "customCSS.css"
+      }
+   ],
+   "appCache": {
+      "cache": [
+         "index.html"
+      ],
+      "network": [
+         "*"
+      ],
+      "fallback": []
+   },
+   "resources": [
+      "resources/images",
+      "resources/icons",
+      "resources/sounds",
+      "resources/startup"
+   ],
+   "ignore": [
+      ".svn$"
+   ],
+   "archivePath": "archive",
+   "requires": [],
+   "id": "2a2a0a3b-cee3-437f-bb70-61c4256745f4",
+   "classpath": "${app.dir}/app,${app.dir}/app/override/data/proxy/,${app.dir}/app/override/dataview/,${app.dir}/app/override/plugin/"
+}

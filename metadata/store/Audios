@@ -1,0 +1,117 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Audios",
+        "model": null,
+        "storeId": "Audios"
+    },
+    "designerId": "528d2333-0c88-46d7-878c-ba5196da1b60",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "id"
+            },
+            "designerId": "c8223e2e-1fda-414b-8315-c0ae792fea9b"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "owner_id"
+            },
+            "designerId": "01547304-acce-42cc-abb3-58b56ad95f9d"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "title"
+            },
+            "designerId": "c2b872aa-0a1e-4fd9-91f5-b1402783f533"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "artist"
+            },
+            "designerId": "6baaa5fd-c8d2-4e4a-bdda-1f3526bc7769"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "date"
+            },
+            "designerId": "c2a0aba2-ebfe-4f14-b122-307927da33e0"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "duration"
+            },
+            "designerId": "466f6643-aef3-44c5-ac29-9b37d2695526"
+        },
+        {
+            "type": "Ext.data.proxy.Rest",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "limitParam": "count",
+                "startParam": "offset",
+                "url": "https://api.vk.com/method/audio.get"
+            },
+            "designerId": "4354a604-c791-4f3f-b054-b7eac7850772",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "response.items",
+                        "totalProperty": "response.count"
+                    },
+                    "designerId": "1c3c844b-ba05-466d-b128-11e6e941ec44"
+                }
+            ]
+        }
+    ]
+}

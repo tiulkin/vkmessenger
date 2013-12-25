@@ -1,0 +1,764 @@
+<?
+require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
+$APPLICATION->SetTitle("Услуги");
+?>
+<div id="page-wrapper"> 
+  <table border="0" cellpadding="1" cellspacing="1" align="center" bgcolor="#FF00FF" style="border-collapse: collapse;"> 
+    <tbody> 
+      <tr><td style="text-align: center;" width="1399" height="30" bgcolor="#F16C4D"><b><font size="4" color="#ffffff">Бюро услуг Севастополя</font></b></td></tr>
+     </tbody>
+   </table>
+ 	 
+  <div id="header"> 		 
+    <div id="header-title"> 			 
+      <div> 				 
+        <div> 				 
+          <div style="width: 1400px; margin-bottom: -10px;"> 						 
+            <div style="position: absolute; top: 0px; width: 100%; left: 0px; z-index: 0; padding: 0px; margin-top: -3px;"> 							<a href="http://sev-city.ru/service/" ><object style="z-index: 0;" id="banner" width="100%" height="138" type="application/x-shockwave-flash" data="http://sev-city.ru/images/banner4.swf"> 							<param name="allowScriptAccess" value="sameDomain"></param> 							<param name="movie" value="banner4.swf"></param> 							<param name="quality" value="high"></param> 							<param name="bgcolor" value="#ffffff"></param> 							<param name="wmode" value="transparent"></param> 							<param name="allowFullScreen" value="false"></param> 							</object> 	</a>					</div>
+           					</div>
+         				</div>
+       			</div>
+     		</div>
+   	</div>
+ 
+  <div style="text-align: center;"><b><font size="4" color="#f16c4d">Команда профессионалов службы &quot;Мастер-Сервис&quot; готова оказать Вам самые разнообразные услуги:</font></b></div>
+ 
+  <div style="text-align: center;"><b><font size="4" color="#f16c4d"> 
+        <br />
+       </font></b></div>
+ 
+  <table valign="top" cellpadding="1" cellspacing="1" style="border-collapse: collapse;" width="100%"> 
+    <tbody> 
+      <tr><td valign="top" width="70%"> <blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"> 	 
+            <table style="border-top-width: 4px; border-top-style: solid; border-top-color: rgb(70, 212, 248); border-collapse: collapse;" width="99%"> 
+              <tbody> 
+                <tr><td> 
+                    <br />
+                   </td></tr>
+               </tbody>
+             </table>
+           	 </blockquote><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><b style="color: rgb(0, 84, 165); font-size: x-large;">&rArr;</b><b><font color="#0054a5" size="5"><a href="sevcity.ru" target="_blank" >Строительство, ремонт, отделка домов, квартир, офисов</a></font></b></blockquote></blockquote><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><b> 
+                  <br />
+                 </b></blockquote><img src="/upload/medialibrary/40d/40dc3fd0e0244e8ab2d4345664efaffe.jpg" title="1.jpg" border="0" alt="1.jpg" width="700" height="204"  /></blockquote><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"></blockquote></blockquote></blockquote><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><b><font color="#ff0000" size="5"> 
+                                <br />
+                               </font></b></blockquote><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><b><font color="#ff0000" size="5">тел. 095-740-20-70</font></b></blockquote></blockquote></blockquote></blockquote></blockquote></blockquote></blockquote></blockquote> 
+            <div> 
+              <div> 
+                <div> 
+                  <ul> 
+                    <li style="text-align: left;"><font size="4">Строительство домов, дач, под ключ</font></li>
+                   
+                    <li style="text-align: left;"><font size="4">Капитальный  и косметический ремонт квартиры или офиса под ключ</font></li>
+                   
+                    <li style="text-align: left;"><font size="4">Все виды отделочных работ внутри и снаружи помещений, перепланировка</font></li>
+                   
+                    <li style="text-align: left;"><font size="4">Кровельные работы, монтаж и ремонт кровли</font></li>
+                   
+                    <li style="text-align: left;"><font size="4">Выравнивание стен, штукатурка, шпаклевка, покраска</font></li>
+                   
+                    <li style="text-align: left;"><font size="4">Многоуровневые потолки любой сложности, арки</font></li>
+                   
+                    <li style="text-align: left;"><font size="4">Санузел &quot;под ключ&quot;, тёплый пол, плитка, кафель</font> 
+                      <div> 
+                        <div> 
+                          <div> </div>
+                         </div>
+                       </div>
+                     </li>
+                   
+                    <li><span style="font-size: large;">Обои, ламинат, линолеум, откосы</span></li>
+                   
+                    <li><span style="font-size: large;">Малярные работы любой сложности</span></li>
+                   
+                    <li><span style="font-size: large;">Газосварка</span></li>
+                   
+                    <li><span style="font-size: large;">Установка сантехники, ремонт смесителей, унитазов, бойлеров, газовых колонок, водопровода, канализации, отопления</span></li>
+                   
+                    <li><span style="font-size: large;">Балконы, лоджии, пристройки под ключ</span></li>
+                   
+                    <li><span style="font-size: large;">Еврозаборы</span></li>
+                   
+                    <li><span style="font-size: large;">Ремонт гаражей, подъездов</span></li>
+                   
+                    <li><span style="font-size: large;">Вывоз строительного мусора</span></li>
+                   </ul>
+                 </div>
+               </div>
+             </div>
+           
+            <div><font size="4"><a href="http://sev-city.ru" target="_blank" >Подробнее...</a></font></div>
+           
+            <div> 
+              <br />
+             </div>
+           </blockquote> <blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"> 	 
+            <table style="border-top-width: 4px; border-top-style: solid; border-top-color: rgb(70, 212, 248); border-collapse: collapse;" width="99%"> 
+              <tbody> 
+                <tr><td> 
+                    <br />
+                   </td></tr>
+               </tbody>
+             </table>
+           	 </blockquote><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><b style="color: rgb(0, 84, 165); font-size: x-large;">⇒</b><b><font color="#0054a5" size="5">Ремонт и подключение бытовой и цифровой техники</font></b></blockquote></blockquote><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><b><font color="#0054a5"> 
+                  <br />
+                 </font></b></blockquote><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><img src="/upload/medialibrary/bfa/bfa6636144d49b0a6f5dfdf14e10abcd.jpg" title="быттехника.jpg" border="0" alt="быттехника.jpg" width="700" height="204"  /></blockquote><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"> 
+              <br />
+             </blockquote></blockquote><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><b><font color="#ff0000" size="5">тел. 095-</font></b><b style="color: rgb(255, 0, 0); font-size: x-large;">355-57-49</b></blockquote><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><b><font color="#ff0000" size="2"> 
+                                <br />
+                               </font></b></blockquote></blockquote></blockquote></blockquote></blockquote></blockquote></blockquote></blockquote></blockquote><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><font size="4"><b>Производим профессиональный  ремонт на дому и в мастерской: </b></font></blockquote></blockquote></blockquote> 
+          <div> 
+            <ul> 
+              <ul> 
+                <li><span style="font-size: large;">стиральных и  посудомоечных машин, электроплит, холодильников, бойлеров, кондиционеров, двухконтурных котлов;</span></li>
+               
+                <li style="text-align: left;"><font size="4">газовых колонок, плит, вытяжек, духовых шкафов, варочных поверхностей,</font></li>
+               
+                <li style="text-align: left;"><font size="4">ЖК, плазменных, кинескопных телевизоров, мониторов;</font></li>
+               
+                <li style="text-align: left;"><font size="4">аудио-, видеотехники, DVD-проигрывателей, музыкальных центров, радиоприемников, автомагнитол, пультов ДУ, сотовых и радиотелефонов, спутниковых ресиверов;</font></li>
+               
+                <li style="text-align: left;"><font size="4">СВЧ печей,  цифровых фотоаппаратов, компьютеров, ноутбуков, </font></li>
+               
+                <li style="text-align: left;"><font size="4">швейных машин;</font></li>
+               
+                <li style="text-align: left;"><font size="4">спутниковое телевидение: установка, настройка</font></li>
+               </ul>
+             </ul>
+           <blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"> 
+              <div><a href="http://sev-city.ru" target="_blank" ><font size="4">Подробнее...</font></a></div>
+             </blockquote></div>
+         <blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"> 
+            <br />
+           </blockquote> <blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"> 		 
+            <table style="border-top-width: 4px; border-top-style: solid; border-top-color: rgb(70, 212, 248); border-collapse: collapse;" width="99%"> 
+              <tbody> 
+                <tr><td> 
+                    <br />
+                   </td></tr>
+               </tbody>
+             </table>
+           		 </blockquote><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><b style="color: rgb(0, 84, 165); font-size: x-large;">⇒</b><b><font size="5" color="#0054a5">Ремонт компьютеров и ноутбуков, обслуживание, настройка, модернизация</font></b></blockquote></blockquote><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"> 
+              <br />
+             </blockquote><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><img src="/upload/medialibrary/408/40811a9fc9375708730667a55d6364f0.jpg" title="компьютеры.jpg" border="0" alt="компьютеры.jpg" width="700" height="204"  /></blockquote><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"> 
+              <br />
+             </blockquote></blockquote><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><b><font color="#ff0000" size="5">тел. </font></b><b style="color: rgb(255, 0, 0); font-size: x-large;">095-</b><b style="color: rgb(255, 0, 0); font-size: x-large;">598-37-35</b></blockquote><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><b style="color: rgb(255, 0, 0);"> 
+                              <br />
+                             </b></blockquote></blockquote></blockquote></blockquote></blockquote></blockquote></blockquote></blockquote></blockquote><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"> 
+            <div style="text-align: center;"><span style="font-size: large;"><b>Ремонт и настройка Вашего персонального компьютера или ноутбука в соответствии с Вашими предпочтениями, а также:</b></span></div>
+           
+            <ul> 
+              <li><font size="4">Установка (переустановка) Windows;</font></li>
+             
+              <li><font size="4">Установка и персонализация программ, в т.ч. драйверов;</font></li>
+             
+              <li><font size="4">Восстановление, архивирование, резервное копирование данных.</font></li>
+             
+              <li><font size="4">Удаление вирусов, баннеров, информеров, троянских и шпионских программ, восстановление системы после сбоев</font></li>
+             </ul>
+           
+            <div><a href="http://sev-city.ru" target="_blank" ><font size="4">Подробнее...</font></a></div>
+           </blockquote><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"> 
+            <br />
+           
+            <table style="border-top-width: 4px; border-top-style: solid; border-top-color: rgb(70, 212, 248); border-collapse: collapse;" width="99%"> 
+              <tbody> 
+                <tr><td> 
+                    <br />
+                   </td></tr>
+               </tbody>
+             </table>
+           			 <blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><b style="color: rgb(255, 0, 0); font-size: x-large;"> </b></blockquote></blockquote><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><b style="color: rgb(0, 84, 165); font-size: x-large;">⇒</b><b style="color: rgb(0, 84, 165); font-size: x-large;">Домашний мастер</b></blockquote></blockquote><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><font color="#0054a5"><b> 
+                  <br />
+                 </b></font></blockquote><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><img src="/upload/medialibrary/160/1601333ef1feb3cc4dc918a0b50386c4.jpg" title="дом-мастер.jpg" border="0" alt="дом-мастер.jpg" width="700" height="204"  /></blockquote><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"> 
+              <br />
+             </blockquote></blockquote><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><b><font color="#ff0000" size="5">тел. </font></b><b style="color: rgb(255, 0, 0); font-size: x-large;">050-927-22-97</b></blockquote></blockquote></blockquote></blockquote></blockquote></blockquote></blockquote></blockquote> 
+            <ul> 
+              <li><font size="4">Сантехник: водопровод, отопление, канализация. Установка и ремонт ванн, унитазов, моек</font></li>
+             
+              <li><font size="4">Электрик: монтаж и замена электропроводки, установка розеток,  выключателей, люстр, электороприборов</font></li>
+             
+              <li><font size="4">Столяр: ремонт и сборка мебели, установка карнизов, зеркал, полок</font></li>
+             
+              <li><font size="4">Ремонт и установка окон</font></li>
+             
+              <li><font size="4">Установка, вскрытие и замена дверных замков</font></li>
+             
+              <li><font size="4">Установка входных и межкомнатных дверей</font></li>
+             
+              <li><font size="4">Укладка паркета, ламината, циклевка</font></li>
+             
+              <li><font size="4">Дизайн интерьера</font></li>
+             
+              <li><font size="4">Ландшафтный дизайн</font></li>
+             
+              <li><font size="4">Качественная уборка помещений</font></li>
+             </ul>
+           <blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"></blockquote></blockquote></blockquote></blockquote></blockquote></blockquote></blockquote><a href="http://sev-city.ru" target="_blank" ><font size="4">Подробнее...</font></a><b style="color: rgb(255, 0, 0); font-size: x-large;"> </b></blockquote><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"> 
+            <br />
+           
+            <table style="border-top-width: 4px; border-top-style: solid; border-top-color: rgb(70, 212, 248); border-collapse: collapse;" width="99%"> 
+              <tbody> 
+                <tr><td> 
+                    <br />
+                   </td></tr>
+               </tbody>
+             </table>
+           			 <blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"> </blockquote></blockquote><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><b style="color: rgb(0, 84, 165); font-size: x-large;">⇒</b><b><font size="5" color="#0054a5">Услуги для женщин</font></b></blockquote></blockquote><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><b> 
+                <br />
+               </b></blockquote><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><img src="/upload/medialibrary/9cc/9cca3ed41676add4c92a82d1e16ece54.jpg" title="женщины.jpg" border="0" alt="женщины.jpg" width="700" height="204"  /></blockquote><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"> 
+              <br />
+             </blockquote></blockquote><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><b><font color="#ff0000" size="5">тел. </font></b><b style="color: rgb(255, 0, 0); font-size: x-large;">050-927-22-97</b></blockquote></blockquote></blockquote></blockquote></blockquote></blockquote></blockquote></blockquote></blockquote> 
+          <div> 
+            <ul> 
+              <ul> 
+                <li style="text-align: left;"><font size="4">Услуги парикмахера-стилиста на дому (стрижки, причёски, укладки и т.д.)</font></li>
+               
+                <li style="text-align: left;"><font size="4">Наращивание волос, биозавивка, выпрямление и ламинирование волос, плетение кос, афронаращивание</font></li>
+               
+                <li style="text-align: left;"><font size="4">Макияж, косметологические процедуры</font></li>
+               
+                <li style="text-align: left;"><font size="4">Маникюр, педикюр</font></li>
+               
+                <li style="text-align: left;"><font size="4">Наращивание ногтей - гелевое,  акриловое, художественная роспись</font></li>
+               
+                <li style="text-align: left;"><font size="4">Наращивание ресниц</font></li>
+               </ul>
+             </ul>
+           
+            <ul> 
+              <ul> </ul>
+             </ul>
+           </div>
+         <blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"> 
+            <div><a href="http://sev-city.ru" target="_blank" ><font size="4">Подробнее...</font></a></div>
+           
+            <div> 
+              <br />
+             </div>
+           </blockquote> 
+          <div> 
+            <div><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"> 
+                <table style="border-top-width: 4px; border-top-style: solid; border-top-color: rgb(70, 212, 248); border-collapse: collapse;" width="99%"> 
+                  <tbody> 
+                    <tr><td> 
+                        <br />
+                       </td></tr>
+                   </tbody>
+                 </table>
+               				 <blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"> </blockquote></blockquote></div>
+           </div>
+         <blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"> 
+            <div> 
+              <div><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><b style="color: rgb(0, 84, 165); font-size: x-large;">⇒</b><b style="color: rgb(0, 84, 165); font-size: x-large;">Грузоперевозки</b></blockquote></div>
+             </div>
+           </blockquote> 
+          <div> 
+            <div><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><b> 
+                    <br />
+                   </b></blockquote><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><img src="/upload/medialibrary/f02/f02e789e36d68522961e91313f1467fc.jpg" title="грузоперевозки.jpg" border="0" alt="грузоперевозки.jpg" width="700" height="204"  /></blockquote><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"> 
+                  <br />
+                 </blockquote></blockquote><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><b><font color="#ff0000" size="5">тел. </font></b><b style="color: rgb(255, 0, 0); font-size: x-large;">095-717-51-89</b></blockquote></blockquote></blockquote></blockquote></blockquote></blockquote></blockquote></blockquote></blockquote> 
+              <div> 
+                <ul> 
+                  <ul> 
+                    <li><span style="font-size: large;">Грузоперевозки по городу и Крыму до 5 тонн, услуги грузчиков</span></li>
+                   
+                    <li><span style="font-size: large;">Пассажирские перевозки, экскурсии</span></li>
+                   </ul>
+                 </ul>
+               </div>
+             </div>
+           </div>
+         <blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"> 
+            <div> 
+              <div> 
+                <div><font size="4"><a href="http://sev-city.ru" target="_blank" >Подробнее...</a></font></div>
+               </div>
+             </div>
+           
+            <div> 
+              <br />
+             </div>
+           </blockquote> 
+          <div> 
+            <div> 
+              <div> 
+                <div><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><font color="#0054a5" size="5"><b> 
+                        <table style="border-top-width: 4px; border-top-style: solid; border-top-color: rgb(70, 212, 248); border-collapse: collapse;" width="99%"> 					 
+                          <tbody> 						 
+                            <tr><td> 							 
+                                <br />
+                               						 </td></tr>
+                           					 </tbody>
+                         					 </table>
+                       				 </b></font><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"></blockquote></blockquote></div>
+               </div>
+             </div>
+           </div>
+         <blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"> 
+            <div> 
+              <div> 
+                <div> 
+                  <div><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><b style="color: rgb(0, 84, 165); font-size: x-large;">⇒</b><font color="#0054a5" size="5"><b>Обучение, репетиторы, подготовка к школе</b></font>  				 </blockquote></div>
+                 </div>
+               </div>
+             </div>
+           </blockquote> 
+          <div> 
+            <div> 
+              <div> 
+                <div><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"> 			 <blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"></blockquote><b> 				 
+                      <br />
+                     				 </b><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"></blockquote><img src="/upload/medialibrary/9c4/9c4c76cb88922c50f318dbfefd60d140.jpg" title="обучение.jpg" border="0" alt="обучение.jpg" width="700" height="204"  /> 				 
+                    <br />
+                   			 				 
+                    <br />
+                   			 <blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><b><font color="#ff0000" size="5">тел. </font></b><b style="color: rgb(255, 0, 0); font-size: x-large;">095-734-94-79</b></blockquote></blockquote></blockquote></blockquote></blockquote></blockquote></blockquote> 
+                    <ul> 
+                      <li><span style="font-size: large;">Индивидуальное обучение работе на компьютере и в Интернете</span></li>
+                     
+                      <li><span style="font-size: large;">Английский язык для взрослых, студентов  и детей, занятия индивидуально и в группах, все уровни, включая &quot;нулевой&quot; и разговорный</span></li>
+                     
+                      <li><span style="font-size: large;">Французский, немецкий, испанский, итальянский, португальский, польский &ndash; индивидуальные и групповые занятия с опытными преподавателями</span></li>
+                     
+                      <li><span style="font-size: large;">Услуги репетиторов по математике, информатике, физике, химии, биологии, истории, русскому языку и литературе. Подготовка к ВНО</span></li>
+                     
+                      <li><span style="font-size: large;">Подготовка детей к школе: чтение, письмо, грамота, развитие речи, математика, логика</span></li>
+                     
+                      <li><span style="font-size: large;">Уроки игры на фортепиано, гитаре, скрипке</span></li>
+                     
+                      <li><span style="font-size: large;">Уроки вокала</span></li>
+                     
+                      <ul> </ul>
+                     </ul>
+                   </blockquote></div>
+               			 </div>
+             </div>
+           </div>
+         <blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"> 
+            <div> 
+              <div> 
+                <div> 
+                  <div><a href="http://sev-city.ru" target="_blank" ><font size="4">Подробнее...</font></a><b style="color: rgb(0, 84, 165); font-size: x-large;"> </b></div>
+                 
+                  <div> 
+                    <br />
+                   </div>
+                 
+                  <table style="border-top-width: 4px; border-top-style: solid; border-top-color: rgb(70, 212, 248); border-collapse: collapse;" width="99%"> 
+                    <tbody> 
+                      <tr><td> 
+                          <br />
+                         </td></tr>
+                     </tbody>
+                   </table>
+                 <blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"> <b style="color: rgb(0, 84, 165); font-size: x-large;">⇒</b><font color="#0054a5" size="5"><b>Юридические услуги</b></font>   
+                    <div> <blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"></blockquote><b> 
+                        <br />
+                       </b><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"></blockquote><img src="/upload/medialibrary/004/004e49fdb32e5b9084b60d1502a7127a.jpg" title="юридич.jpg" border="0" alt="юридич.jpg" width="700" height="204"  /></div>
+                   </blockquote></div>
+               </div>
+             </div>
+           </blockquote> 
+          <div> 
+            <br />
+           </div>
+         <blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"> 
+              <div><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><b><font color="#ff0000" size="5">тел. </font></b><b style="color: rgb(255, 0, 0); font-size: x-large;">095-734-94-79</b></blockquote></blockquote></blockquote></blockquote></blockquote></blockquote></blockquote></div>
+             </blockquote></blockquote> 
+          <div> 
+            <ul> 
+              <ul> 
+                <li><font size="4">Услуги адвоката, юриста, представительство в суде</font></li>
+               
+                <li><font size="4">Ведение дел по гражданским, жилищным, земельным, наследственным, семейным, хозяйственным спорам</font></li>
+               
+                <li><font size="4">Споры с банками, ДТП</font></li>
+               
+                <li><font size="4">Составление исковых заявлений, ходатайств, жалоб, договоров</font></li>
+               
+                <li><font size="4">Взыскание ущерба, возврат долга</font></li>
+               
+                <li><font size="4">Установление право собственности</font></li>
+               </ul>
+             </ul>
+           </div>
+         <blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"> 
+            <div> 
+              <div><a href="http://sev-city.ru" target="_blank" ><font size="4">Подробнее...</font></a><font color="#0054a5"><b> </b></font></div>
+             
+              <div><font color="#0054a5"><b> 
+                    <br />
+                   </b></font></div>
+             
+              <table style="border-top-width: 4px; border-top-style: solid; border-top-color: rgb(70, 212, 248); border-collapse: collapse;" width="99%"> 
+                <tbody> 
+                  <tr><td> 
+                      <br />
+                     </td></tr>
+                 </tbody>
+               </table>
+             			 <blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"> <b style="color: rgb(0, 84, 165); font-size: x-large;">⇒</b><b style="color: rgb(0, 84, 165); font-size: x-large;">Операции с недвижимостью</b> </blockquote></div>
+           
+            <div><b style="color: rgb(0, 84, 165);"> 
+                <br />
+               </b></div>
+           </blockquote><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"> 
+            <div><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"> 
+                <div><img src="/upload/medialibrary/830/830a840abd568c1b2c6b501a50839c7e.jpg" title="недвиж.jpg" border="0" alt="недвиж.jpg" width="700" height="204"  /></div>
+               </blockquote></div>
+           </blockquote> 
+          <div><b><font color="#ff0000" size="5"> 
+                <br />
+               </font></b></div>
+         <blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"> 
+                            <div><b><font color="#ff0000" size="5">тел. </font></b><b style="color: rgb(255, 0, 0); font-size: x-large;">099-149-80-14</b></div>
+                           </blockquote></blockquote></blockquote></blockquote></blockquote></blockquote></blockquote></blockquote></blockquote> 
+          <div> 
+            <div> 
+              <ul> 
+                <ul> 
+                  <li><font size="4">Продажа, покупка</font></li>
+                 
+                  <li><font size="4">Аренда жилья</font></li>
+                 
+                  <li><font size="4">Оценка недвижимости</font></li>
+                 </ul>
+               </ul>
+             </div>
+           </div>
+         <blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"> 
+            <div> 
+              <div> 
+                <div><a href="http://sev-city.ru" target="_blank" ><font size="4">Подробнее...</font></a></div>
+               </div>
+             </div>
+           </blockquote> <blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"> 
+            <div> 
+              <div> 
+                <div><font color="#0054a5"><b> 
+                      <br />
+                     </b></font></div>
+               
+                <table style="border-top-width: 4px; border-top-style: solid; border-top-color: rgb(70, 212, 248); border-collapse: collapse;" width="99%"> 
+                  <tbody> 
+                    <tr><td> 
+                        <br />
+                       </td></tr>
+                   </tbody>
+                 </table>
+               				 <blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"> <b style="color: rgb(0, 84, 165); font-size: x-large;">⇒</b><b style="color: rgb(0, 84, 165); font-size: x-large;">Услуги для предпринимателей</b> </blockquote></div>
+             </div>
+           </blockquote><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"> 
+              <div> 
+                <div> 
+                  <div><b> 
+                      <br />
+                     </b><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"></blockquote><img src="/upload/medialibrary/eff/eff22e7b3897018d2935f703549ac0bb.jpg" title="предприн.jpg" border="0" alt="предприн.jpg" width="700" height="204"  /></div>
+                 </div>
+               </div>
+             </blockquote></blockquote> 
+          <div> 
+            <div> 
+              <div><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"></blockquote> 
+                <br />
+               </div>
+             </div>
+           </div>
+         <blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"> 
+              <div> 
+                <div> 
+                  <div><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><b><font color="#ff0000" size="5">тел. </font></b><b style="color: rgb(255, 0, 0); font-size: x-large;">095-027-23-92</b></blockquote></blockquote></blockquote></blockquote></blockquote></blockquote></blockquote></div>
+                 </div>
+               </div>
+             </blockquote></blockquote> 
+          <div> 
+            <div> 
+              <div> 
+                <ul> 
+                  <ul> 
+                    <li><font size="4">Любые полиграфические услуги</font></li>
+                   
+                    <li><font size="4">Наружная реклама – установка и размещение, согласование документов</font></li>
+                   
+                    <li><font size="4">Бухгалтерские услуги</font></li>
+                   
+                    <li><font size="4">Юридические услуги</font></li>
+                   
+                    <li><font size="4">Ремонт и обслуживание компьютерной и оргтехники</font></li>
+                   
+                    <li><font size="4">Установка камер видеонаблюдения, GSM-сигнализации</font></li>
+                   
+                    <li><font size="4">Разработка WEB-сайтов &quot;под ключ&quot;</font></li>
+                   
+                    <li><font size="4">Услуги перевода с иностранных языков, нотариальное заверение переведенных документов</font></li>
+                   
+                    <li><font size="4">Доставка канцтоваров и офисной бумаги</font></li>
+                   
+                    <li><font size="4">Качественная уборка офисных, торговых и складских помещений</font></li>
+                   </ul>
+                 </ul>
+               </div>
+             </div>
+           </div>
+         <blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"> 
+            <div> 
+              <div> 
+                <div> 
+                  <div><a href="http://sev-city.ru" target="_blank" ><font size="4">Подробнее...</font></a></div>
+                 </div>
+               </div>
+             </div>
+           </blockquote> 
+          <div> 
+            <div> 
+              <br />
+             </div>
+           </div>
+         <blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"> 
+            <table style="border-top-width: 4px; border-top-style: solid; border-top-color: rgb(70, 212, 248); border-collapse: collapse;" width="99%"> 
+              <tbody> 
+                <tr><td> 
+                    <br />
+                   </td></tr>
+               </tbody>
+             </table>
+           <blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"> 
+              <div> 
+                <div> 
+                  <div> 
+                    <div><b style="color: rgb(0, 84, 165); font-size: x-large;">⇒</b><font color="#0054a5" size="5"><b>Услуги для животных</b></font></div>
+                   </div>
+                 </div>
+               </div>
+             </blockquote></blockquote><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"> 
+              <div> 
+                <div> 
+                  <div> 
+                    <div><b> 
+                        <br />
+                       </b><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"></blockquote><img src="/upload/medialibrary/1dd/1dd17720cc16f457e4493df4a57d27b0.jpg" title="груминг.jpg" border="0" alt="груминг.jpg" width="700" height="204"  /></div>
+                   </div>
+                 </div>
+               </div>
+             </blockquote></blockquote> 
+          <div> 
+            <div> 
+              <div> 
+                <div><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"></blockquote> 
+                  <br />
+                 </div>
+               </div>
+             </div>
+           </div>
+         <blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"> 
+              <div> 
+                <div> 
+                  <div> 
+                    <div><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><b><font color="#ff0000" size="5">тел. </font></b><b style="color: rgb(255, 0, 0); font-size: x-large;">099-277-43-19</b></blockquote></blockquote></blockquote></blockquote></blockquote></blockquote></blockquote></div>
+                   </div>
+                 </div>
+               </div>
+             </blockquote></blockquote> 
+          <div> 
+            <ul> 
+              <ul> 
+                <li><font size="4">Груминг: стрижка, купание, расчесывание, чистка ушей, подстригание когтей и шерсти.</font></li>
+               
+                <li><font size="4">Воспитание и дрессировка собак</font></li>
+               
+                <li><font size="4">Выгул собаки</font></li>
+               </ul>
+             </ul>
+           
+            <div><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><a href="http://sev-city.ru" target="_blank" ><font size="4">Подробнее...</font></a><font color="#0054a5" size="5"><b> </b></font><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"> 
+                  <br />
+                 </blockquote></blockquote></div>
+           </div>
+         <blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"> 
+            <table style="border-top-width: 4px; border-top-style: solid; border-top-color: rgb(70, 212, 248); border-collapse: collapse;" width="99%"> 
+              <tbody> 
+                <tr><td> 
+                    <br />
+                   </td></tr>
+               </tbody>
+             </table>
+           
+            <div> 
+              <div><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><b style="color: rgb(0, 84, 165); font-size: x-large;">⇒</b><b style="color: rgb(0, 84, 165); font-size: x-large;">Организация праздников, фото- и видеосъемка</b></blockquote></div>
+             </div>
+           </blockquote> 
+          <div> 
+            <div><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><b> 
+                    <br />
+                   </b><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"></blockquote><img src="/upload/medialibrary/53b/53bda53c5983582ed06d4fd4ca9b4d30.jpg" title="праздники.jpg" border="0" alt="праздники.jpg" width="700" height="204"  /></blockquote></blockquote> 
+              <div> 
+                <div><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"></blockquote> 
+                  <br />
+                 </div>
+               </div>
+             </div>
+           </div>
+         <blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"> 
+              <div> 
+                <div> 
+                  <div> 
+                    <div> 
+                      <div> 
+                        <div> 
+                          <div><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><b><font color="#ff0000" size="5">тел. </font></b><b style="color: rgb(255, 0, 0); font-size: x-large;">050-192-27-80</b></blockquote></blockquote></blockquote></blockquote></blockquote></blockquote></blockquote></div>
+                         </div>
+                       </div>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+             </blockquote></blockquote> 
+          <div> 
+            <div> 
+              <div> 
+                <ul> 
+                  <ul> 
+                    <li><font size="4">Организация праздников. Тамада. Свадьбы, дни рождения, корпоративы</font></li>
+                   
+                    <li><font size="4">Организация детских праздников и дней рождения в кафе, школе, детском саду или на дому</font></li>
+                   
+                    <li><font size="4">Профессиональная фото- и видеосъёмка</font></li>
+                   
+                    <li><font size="4">Заказ и подача праздничного авто</font></li>
+                   
+                    <li><font size="4">Воздушные шары с гелием, доставка</font></li>
+                   </ul>
+                 </ul>
+               </div>
+             </div>
+           </div>
+         <blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"> 
+            <div> 
+              <div> 
+                <div> 
+                  <div><a href="http://sev-city.ru" target="_blank" ><font size="4">Подробнее...</font></a></div>
+                 </div>
+               </div>
+             </div>
+           </blockquote> 
+          <div> 
+            <div> 
+              <div> 
+                <br />
+               </div>
+             </div>
+           </div>
+         <blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"> 
+            <table style="border-top-width: 4px; border-top-style: solid; border-top-color: rgb(70, 212, 248); border-collapse: collapse;" width="99%"> 
+              <tbody> 
+                <tr><td> 
+                    <br />
+                   </td></tr>
+               </tbody>
+             </table>
+           
+            <div><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><font size="5" color="#0054a5"><b>⇒</b></font><b style="color: rgb(0, 84, 165); font-size: x-large;">Уборка помещений</b></blockquote></div>
+           </blockquote> 
+          <div><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><b> 
+                  <br />
+                 </b><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"></blockquote> <img src="/upload/medialibrary/e71/e71cc12c2b1ed72b8564a399430ecf06.jpg" title="уборка.jpg" border="0" alt="уборка.jpg" width="700" height="204"  /> </blockquote></blockquote> 
+            <div><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"></blockquote> 
+              <br />
+             </div>
+           </div>
+         <blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"> 
+              <div> 
+                <div> 
+                  <div> 
+                    <div> 
+                      <div> 
+                        <div><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><b><font color="#ff0000" size="5">тел. </font></b><b style="color: rgb(255, 0, 0); font-size: x-large;">050-527-52-99</b></blockquote></blockquote></blockquote></blockquote></blockquote></blockquote></blockquote></div>
+                       </div>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+             </blockquote></blockquote> 
+          <div> 
+            <div> 
+              <div> 
+                <div> 
+                  <div> 
+                    <ul> 
+                      <ul> 
+                        <li><font size="4">Широкий комплекс качественных услуг по уборке квартиры</font></li>
+                       
+                        <li><font size="4">Профессиональная уборка офисных, складских и торговых помещений</font></li>
+                       
+                        <li><font size="4">Уборка после строительства или ремонта</font></li>
+                       
+                        <li><font size="4">Комплексная уборка дома и придомовой территории</font></li>
+                       </ul>
+                     </ul>
+                   </div>
+                 </div>
+               </div>
+             </div>
+           </div>
+         <blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"> 
+            <div> 
+              <div> 
+                <div> 
+                  <div> 
+                    <div><a href="http://sev-city.ru" target="_blank" ><font size="4">Подробнее...</font></a></div>
+                   </div>
+                 </div>
+               </div>
+             </div>
+           </blockquote> 
+          <div> 
+            <div> 
+              <div> 
+                <div> 
+                  <div> 
+                    <ul> 
+                      <ul> </ul>
+                     </ul>
+                   </div>
+                 </div>
+               </div>
+             </div>
+           </div>
+         
+          <div> 
+            <div> 
+              <div> 
+                <div> 
+                  <div> 
+                    <ul> </ul>
+                   </div>
+                 </div>
+               </div>
+             </div>
+           </div>
+         <blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"></blockquote></td><td valign="top"><img src="/upload/medialibrary/d63/d6313e7c0d4363c1642681b869a5bc86.gif" title="main.gif" border="0" alt="main.gif" width="437" height="850"  />            <blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"></blockquote> </td> </tr>
+     </tbody>
+   </table>
+ <blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"> 
+      <div style="text-align: left;"> 
+        <div style="text-align: left;"><b><font size="4" color="#0054a5"> </font></b></div>
+       
+        <div style="text-align: left;"> 
+          <br />
+         </div>
+       </div>
+     </blockquote></blockquote> 
+  <div style="text-align: left;"> 
+    <div> 
+      <div> 
+        <ul> 
+          <ul> 
+            <ul> </ul>
+           </ul>
+         </ul>
+       </div>
+     </div>
+   </div>
+ </div>
+ <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

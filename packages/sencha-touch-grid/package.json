@@ -1,0 +1,131 @@
+{
+    "name": "sencha-touch-grid",
+    "type": "code",
+    "creator": "anonymous",
+    "summary": "Sencha Touch Grid",
+    "detailedDescription": "The Sencha Touch Grid is a grid component for Sencha Touch 2.3 that offers a similar to that of ExtJS, but with components designed around touch interaction",
+    "version": "2.3.0.1",
+    "compatVersion": "2.3.0.1",
+    "format": "1",
+    "local": true,
+    "requires": [],
+    "architect": {
+        "compatFrameworks": [
+            "touch23"
+        ],
+        "classes": [
+            {
+                "className": "Ext.grid.column.Column",
+                "definition": true,
+                "js": [
+                    "grid/column/Column.js"
+                ],
+                "css": []
+            },
+            {
+                "className": "Ext.grid.column.Boolean",
+                "definition": true,
+                "js": [
+                    "grid/column/Boolean.js"
+                ],
+                "css": []
+            },
+            {
+                "className": "Ext.grid.column.Date",
+                "definition": true,
+                "js": [
+                    "grid/column/Date.js"
+                ],
+                "css": []
+            },
+            {
+                "className": "Ext.grid.column.Template",
+                "definition": true,
+                "js": [
+                    "grid/column/Template.js"
+                ],
+                "css": []
+            },
+            {
+                "className": "Ext.grid.Grid",
+                "definition": true,
+                "js": [
+                    "grid/Grid.js"
+                ],
+                "css": []
+            },
+            {
+                "className": "Ext.grid.HeaderGroup",
+                "definition": true,
+                "js": [
+                    "grid/HeaderGroup.js"
+                ],
+                "css": []
+            },
+            {
+                "className": "Ext.grid.plugin.ColumnResizing",
+                "definition": true,
+                "js": [
+                    "grid/plugin/ColumnResizing.js"
+                ],
+                "css": []
+            },
+            {
+                "className": "Ext.grid.plugin.Editable",
+                "definition": true,
+                "js": [
+                    "grid/plugin/Editable.js"
+                ],
+                "css": []
+            },
+            {
+                "className": "Ext.grid.plugin.MultiSelection",
+                "definition": true,
+                "js": [
+                    "grid/plugin/MultiSelection.js"
+                ],
+                "css": []
+            },
+            {
+                "className": "Ext.grid.plugin.PagingToolbar",
+                "definition": true,
+                "js": [
+                    "grid/plugin/PagingToolbar.js"
+                ],
+                "css": []
+            },
+            {
+                "className": "Ext.grid.plugin.SummaryRow",
+                "definition": true,
+                "js": [
+                    "grid/plugin/SummaryRow.js"
+                ],
+                "css": []
+            },
+            {
+                "className": "Ext.grid.plugin.ViewOptions",
+                "definition": true,
+                "js": [
+                    "grid/plugin/ViewOptions.js"
+                ],
+                "css": []
+            }
+        ],
+        "requires": [
+            "grid/HeaderContainer.js",
+            "grid/HeaderGroup.js",
+            "grid/Row.js",
+            "grid/column/Column.js",
+            "grid/column/Boolean.js",
+            "grid/column/Date.js",
+            "grid/column/Template.js",
+            "grid/Grid.js",
+            "grid/plugin/ColumnResizing.js",
+            "grid/plugin/Editable.js",
+            "grid/plugin/MultiSelection.js",
+            "grid/plugin/PagingToolbar.js",
+            "grid/plugin/SummaryRow.js",
+            "grid/plugin/ViewOptions.js"
+        ]
+    }
+}

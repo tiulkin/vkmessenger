@@ -1,0 +1,72 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "FriendSuggestions",
+        "groupDir": "ASC",
+        "model": "User",
+        "pageSize": 20,
+        "remoteGroup": true,
+        "storeId": "FriendSuggestions"
+    },
+    "designerId": "10766c54-62d8-4b39-a38b-51e77796bb26",
+    "cn": [
+        {
+            "type": "Ext.util.Grouper",
+            "reference": {
+                "name": "grouper",
+                "type": "object"
+            },
+            "codeClass": null,
+            "designerId": "107628f8-f01e-41f7-9e36-92f223360625",
+            "cn": [
+                {
+                    "type": "fixedfunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|params": [
+                            "item"
+                        ],
+                        "fn": "groupFn",
+                        "implHandler": [
+                            "if (item.get('friendType')!=\"\"&&item.get('friendType')!=undefined)\r",
+                            "{\r",
+                            "    //console.log(item.get('friendType'));\r",
+                            "    return(item.get('friendType'))\r",
+                            "}\r",
+                            "else\r",
+                            "{\r",
+                            "    return (ux.locale.Manager.get('labels.friendSubscribers'));\r",
+                            "}\r",
+                            ""
+                        ]
+                    },
+                    "designerId": "d7ee8269-1993-42c2-b69e-c545b161e244"
+                }
+            ]
+        },
+        {
+            "type": "Ext.data.proxy.Rest",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "appendId": false,
+                "filterParam": null,
+                "limitParam": "count",
+                "startParam": "offset"
+            },
+            "designerId": "33d2391c-5b35-405c-996a-82306fad6afd"
+        }
+    ]
+}

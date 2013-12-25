@@ -1,0 +1,54 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "GlobalSearchFriends",
+        "model": "User",
+        "remoteGroup": true,
+        "storeId": "GlobalSearchFriends"
+    },
+    "designerId": "edecb750-f2b2-48b0-872c-2a1e295ac980",
+    "cn": [
+        {
+            "type": "Ext.util.Grouper",
+            "reference": {
+                "name": "grouper",
+                "type": "object"
+            },
+            "codeClass": null,
+            "designerId": "d9289d78-352d-4dbb-8a14-a27c2caa8139",
+            "cn": [
+                {
+                    "type": "fixedfunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|params": [
+                            "item"
+                        ],
+                        "fn": "groupFn",
+                        "implHandler": [
+                            "if (item.get('friendType')!=\"\")\r",
+                            "{\r",
+                            "    return(item.get('friendType'))\r",
+                            "}\r",
+                            "// else\r",
+                            "// {\r",
+                            "//     return (item.get('first_name')[0]);\r",
+                            "// }\r",
+                            ""
+                        ]
+                    },
+                    "designerId": "f8696257-ee35-4b56-a9f5-7eba3d68c5f8"
+                }
+            ]
+        }
+    ]
+}

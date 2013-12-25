@@ -1,0 +1,256 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "centered": true,
+        "designer|userAlias": "mapchooser",
+        "designer|userClassName": "MapChooser",
+        "height": "100%",
+        "hideAnimation": [
+            "{\r",
+            "    type: 'popOut',\r",
+            "    duration: 250,\r",
+            "    easing: 'ease-out'\r",
+            "}\r",
+            ""
+        ],
+        "hideOnMaskTap": true,
+        "html": null,
+        "id": "tmpPanel",
+        "itemId": "popUpChooser",
+        "layout": "fit",
+        "modal": true,
+        "showAnimation": [
+            "{\r",
+            "    type: 'popIn',\r",
+            "    duration: 250,\r",
+            "    easing: 'ease-out'\r",
+            "}"
+        ],
+        "width": "100%"
+    },
+    "configAlternates": {
+        "hideAnimation": "object",
+        "showAnimation": "object"
+    },
+    "designerId": "1afcf863-6142-4c54-bbce-8f84fd32274d",
+    "cn": [
+        {
+            "type": "Ext.Component",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "html": null,
+                "id": "YMapsID"
+            },
+            "designerId": "e1da6c78-94db-40d5-a719-efa5c64621fc"
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onPopUpChooserPainted",
+                "implHandler": [
+                    "var service = new GeolocationService(),\r",
+                    "    myLocation = service.getLocation({\r",
+                    "        // Режим получения наиболее точных данных.\r",
+                    "        enableHighAccuracy: true,\r",
+                    "        // Максимальное время ожидания ответа (в миллисекундах).\r",
+                    "        timeout: 10000,\r",
+                    "        // Максимальное время жизни полученных данных (в миллисекундах).\r",
+                    "        maximumAge: 1000\r",
+                    "    });\r",
+                    "\r",
+                    "\r",
+                    "\r",
+                    "\r",
+                    "myLocation.then(function (loc) {\r",
+                    "    var myCoords = [loc.latitude, loc.longitude];\r",
+                    "\r",
+                    "    VKM.app.globals.coords=myCoords;\r",
+                    "    VKM.app.globals.myMap = new ymaps.Map('YMapsID', {\r",
+                    "        center: myCoords,\r",
+                    "        zoom: 14,\r",
+                    "        behaviors: ['default', 'scrollZoom']\r",
+                    "    });\r",
+                    "    var SearchControl = new ymaps.control.SearchControl({noPlacemark:true});\r",
+                    "    VKM.app.globals.myMap.controls\r",
+                    "    .add(SearchControl)\r",
+                    "    .add('zoomControl')\r",
+                    "//    .add('typeSelector')\r",
+                    "//    .add('mapTools');\r",
+                    "    VKM.app.globals.myPlacemark = new ymaps.Placemark(myCoords,{}, {preset: \"twirl#redIcon\", draggable: true});\r",
+                    "    VKM.app.globals.myMap.geoObjects.add(VKM.app.globals.myPlacemark);\r",
+                    "\r",
+                    "    //Отслеживаем событие перемещения метки\r",
+                    "    VKM.app.globals.myPlacemark.events.add(\"dragend\", function (e) {\r",
+                    "        VKM.app.globals.coords = this.geometry.getCoordinates();\r",
+                    "        VKM.app.savecoordinats();\r",
+                    "    }, VKM.app.globals.myPlacemark);\r",
+                    "\r",
+                    "    //Отслеживаем событие щелчка по карте\r",
+                    "    VKM.app.globals.myMap.events.add('click', function (e) {\r",
+                    "        VKM.app.globals.coords = e.get('coordPosition');\r",
+                    "        VKM.app.savecoordinats();\r",
+                    "    });\r",
+                    "\r",
+                    "    //Отслеживаем событие выбора результата поиска\r",
+                    "    SearchControl.events.add(\"resultselect\", function (e) {\r",
+                    "        VKM.app.globals.coords = SearchControl.getResultsArray()[0].geometry.getCoordinates();\r",
+                    "        VKM.app.savecoordinats();\r",
+                    "    });\r",
+                    "\r",
+                    "\r",
+                    "    //Ослеживаем событие изменения области просмотра карты - масштаб и центр карты\r",
+                    "    VKM.app.globals.myMap.events.add('boundschange', function (event) {\r",
+                    "        if (event.get('newZoom') != event.get('oldZoom')) {\r",
+                    "            VKM.app.savecoordinats();\r",
+                    "        }\r",
+                    "        if (event.get('newCenter') != event.get('oldCenter')) {\r",
+                    "            VKM.app.savecoordinats();\r",
+                    "        }\r",
+                    "\r",
+                    "    });\r",
+                    "\r",
+                    "});\r",
+                    "\r",
+                    "\r",
+                    ""
+                ],
+                "name": "painted"
+            },
+            "designerId": "a29cb023-5a40-4b29-b922-a1ca5a003fa7"
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onTmpPanelDestroy",
+                "implHandler": [
+                    "console.log(10);\r",
+                    "VKM.app.globals.myMap.destroy()"
+                ],
+                "name": "destroy"
+            },
+            "designerId": "9a5b6cf9-9387-4870-a921-4a39da02d9bc"
+        },
+        {
+            "type": "Ext.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "container|pack": "center",
+                "docked": "bottom",
+                "layout": "hbox",
+                "style": [
+                    "{\"font-size\":\"1.2em\"}"
+                ]
+            },
+            "configAlternates": {
+                "style": "object"
+            },
+            "designerId": "b9895f65-d8cb-40b4-9334-6e43276d85fd",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|uiInterfaceName": "action",
+                        "iconCls": "delete",
+                        "itemId": "mybutton116",
+                        "text": null,
+                        "ui": "action",
+                        "width": "30%"
+                    },
+                    "designerId": "cb064826-fad0-460d-ad68-06c14fcbc633",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onMybutton116Tap",
+                                "implHandler": [
+                                    "button.up('#tmpPanel').destroy();"
+                                ],
+                                "name": "tap"
+                            },
+                            "designerId": "63596b48-c936-49d8-8aef-3fe94d6fa7d6"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|uiInterfaceName": "action",
+                        "iconCls": "checkMark",
+                        "itemId": "mybutton115",
+                        "text": null,
+                        "ui": "action",
+                        "width": "30%"
+                    },
+                    "designerId": "736ef90c-988a-4404-b0a5-d2eac7c05c4f",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onMybutton115Tap",
+                                "implHandler": [
+                                    "var url='http://maps.googleapis.com/maps/api/staticmap?center='+VKM.app.globals.coords+\r",
+                                    "        '&zoom=15&size=100x70&maptype=roadmap&markers=color:blue%7C'+VKM.app.globals.coords+'&sensor=true'\r",
+                                    "\r",
+                                    "Ext.getStore('Attachments').add({\r",
+                                    "    id:'geo',\r",
+                                    "    type:'geo',\r",
+                                    "    picture:url,\r",
+                                    "    lat:VKM.app.globals.coords[0],\r",
+                                    "    \"long\":VKM.app.globals.coords[1]\r",
+                                    "});\r",
+                                    "button.up('#tmpPanel').destroy();\r",
+                                    ""
+                                ],
+                                "name": "tap"
+                            },
+                            "designerId": "8b946077-78ce-4713-b9c9-131a2eafda71"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,151 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoSync": true,
+        "designer|userClassName": "Config",
+        "storeId": "Config"
+    },
+    "designerId": "ed112cf0-a56b-43b1-a30f-e9129472e3eb",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "config.json"
+            },
+            "designerId": "70b21c85-c49d-418d-9c3c-e22785489ac2",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "idProperty": "variable",
+                        "rootProperty": "globals"
+                    },
+                    "designerId": "7d48e89d-034a-4e9f-9448-807eea92ac22",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onJsonException",
+                                "implHandler": [
+                                    ""
+                                ],
+                                "name": "exception"
+                            },
+                            "designerId": "de95373d-635b-477e-9f91-73a3c6c59924"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "variable"
+            },
+            "designerId": "882c91dd-d066-420e-b324-ed8b0547f585"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "value"
+            },
+            "designerId": "4cefc958-607e-4dbb-9a6c-3eb320587cae"
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onJsonstoreLoad",
+                "implHandler": [
+                    "for (var recordId in records)\r",
+                    "{\r",
+                    "    VKM.app.globals[records[recordId].data['variable']]=records[recordId].data['value'];\r",
+                    "\r",
+                    "}\r",
+                    "\r",
+                    "\r",
+                    "\r",
+                    "\r",
+                    "// var localServer='';\r",
+                    "// var dbName='';\r",
+                    "// var localServer=VKM.app.globals.localServer;\r",
+                    "\r",
+                    "// if (!VKM.app.globals.dbName)\r",
+                    "// {\r",
+                    "//     VKM.app.globals.dbName='vkm';\r",
+                    "// }\r",
+                    "// dbName=VKM.app.globals.dbName;\r",
+                    "//VKM.app.globals.localDB= new PouchDB(localServer+dbName);\r",
+                    " VKM.app.startApp();\r",
+                    "\r",
+                    "\r",
+                    "\r",
+                    "\r",
+                    "\r",
+                    "//alert(Ext.device.Device.uuid);\r",
+                    "//NoERP.app.globals.deviceId=Ext.device.Device.uuid;\r",
+                    "\r",
+                    "\r",
+                    "\r",
+                    "\r",
+                    "//NoERP.app.globals.localDirsDB= new PouchDB(localServer+'noerp_dirs');\r",
+                    "//NoERP.app.globals.remoteDirsCouch=new PouchDB(remoteServer+'noerp_0_dirs');\r",
+                    "\r",
+                    "//NoERP.app.globals.localTransactionsDB= new PouchDB(localServer+'noerp_transactions');\r",
+                    "//NoERP.app.globals.remoteTransactionsCouch=new PouchDB(remoteServer+'noerp_0_transactions');\r",
+                    "\r",
+                    "//NoERP.app.globals.localStatDB= new PouchDB(localServer+'noerp_stat');\r",
+                    "//NoERP.app.globals.remoteStatCouch=new PouchDB(remoteServer+'noerp_0_stat');\r",
+                    "\r",
+                    "\r",
+                    "\r",
+                    "\r",
+                    "//if (this.globals.remoteCouch) {\r",
+                    "//    this.sync();\r",
+                    "//}\r",
+                    "\r",
+                    "//var mydb = window.openDatabase(\"testDB\", \"1.0\", \"Test DB\", 10000000);\r",
+                    "\r",
+                    "//this.globals.localDB.replicate.to('http://noerp0:T2612ot@173.230.134.9:5984/abcd', {continuous: true});\r",
+                    ""
+                ],
+                "name": "load"
+            },
+            "designerId": "69cf4ae5-b8cb-45cb-8b57-c4fdbfbbb1ed"
+        }
+    ]
+}

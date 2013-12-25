@@ -1,0 +1,52 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "autoSync": true,
+        "clearOnPageLoad": false,
+        "designer|userClassName": "PhoneContacts",
+        "model": "PhoneContact",
+        "pageSize": null,
+        "storeId": "PhoneContacts"
+    },
+    "designerId": "3fe5c1e2-f31d-4859-b135-a52f44b14276",
+    "cn": [
+        {
+            "type": "Ext.util.Grouper",
+            "reference": {
+                "name": "grouper",
+                "type": "object"
+            },
+            "codeClass": null,
+            "designerId": "4f34d20f-f619-4fa5-b46d-81a4dbf12bb9",
+            "cn": [
+                {
+                    "type": "fixedfunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|params": [
+                            "item"
+                        ],
+                        "fn": "groupFn",
+                        "implHandler": [
+                            "if (item.get('displayName'))\r",
+                            "return (item.get('displayName')[0]);\r",
+                            "\r",
+                            ""
+                        ]
+                    },
+                    "designerId": "eb8939e4-24c8-4f80-8239-a8aa5865159e"
+                }
+            ]
+        }
+    ]
+}

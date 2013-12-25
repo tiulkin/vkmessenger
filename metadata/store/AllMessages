@@ -1,0 +1,82 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "clearOnPageLoad": false,
+        "designer|userClassName": "AllMessages",
+        "model": "Dialogues",
+        "pageSize": 10,
+        "storeId": "AllMessages",
+        "syncRemovedRecords": false
+    },
+    "designerId": "9dafe92c-9c6e-49bc-a27d-9bbef5973caf",
+    "cn": [
+        {
+            "type": "Ext.util.Sorter",
+            "reference": {
+                "name": "sorters",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "direction": "DESC",
+                "property": "date"
+            },
+            "designerId": "5b5e002f-e1c2-4d33-b16c-6797de57fbfd"
+        },
+        {
+            "type": "Ext.data.proxy.Rest",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "appendId": false,
+                "enablePagingParams": null,
+                "filterParam": "undefined",
+                "groupParam": "undefined",
+                "limitParam": "count",
+                "pageParam": null,
+                "startParam": "offset"
+            },
+            "designerId": "797c51ce-21cc-498e-892b-77ab8141a088",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "idProperty": "did",
+                        "rootProperty": "messages.items",
+                        "totalProperty": "count"
+                    },
+                    "designerId": "2c177a4c-4833-45e1-9ee9-5034372a41fc"
+                }
+            ]
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onStoreLoad",
+                "implHandler": [
+                    ""
+                ],
+                "name": "load"
+            },
+            "designerId": "dff30393-3e91-4687-8258-c18449aa4944"
+        }
+    ]
+}

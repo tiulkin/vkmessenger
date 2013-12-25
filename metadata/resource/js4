@@ -1,0 +1,14 @@
+{
+    "type": "jsresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "js4",
+        "id": "medium.js",
+        "url": "medium.js"
+    },
+    "designerId": "b031d77a-de83-4418-8fbb-a5bf15920546"
+}

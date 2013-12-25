@@ -1,0 +1,14 @@
+@include font-face('Tizen Regular', inline-font-files('tizen/TizenSansRegular.ttf', truetype));
+@include font-face('Tizen Medium', inline-font-files('tizen/TizenSansMedium.ttf', truetype));
+
+body,
+html {
+    font-family: "Tizen Regular";
+	font-size: 36px;
+	background-color: $background-color;
+}
+
+input,
+textarea {
+    font-family: "Tizen Regular";
+}

@@ -1,0 +1,44 @@
+{
+    "type": "Ext.dataview.DataView",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "cls": [
+            "dataview-inline"
+        ],
+        "defaultType": null,
+        "designer|userAlias": "albumlist",
+        "designer|userClassName": "AlbumList",
+        "inline": true,
+        "itemId": "albumList",
+        "mode": null,
+        "padding": "20px",
+        "store": "Albums",
+        "useComponents": null,
+        "width": null
+    },
+    "configAlternates": {
+        "inline": "boolean"
+    },
+    "designerId": "ad2dabf8-466a-4202-bd6e-b3100cb5552a",
+    "cn": [
+        {
+            "type": "Ext.XTemplate",
+            "reference": {
+                "name": "itemTpl",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "itemTpl",
+                "implHandler": [
+                    "<div class=\"img\" style=\"background-image: url({thumb_src});\">{title}({size})</div>"
+                ]
+            },
+            "designerId": "b408d09c-e1e3-475c-b9bf-f3cb6c1ae98c"
+        }
+    ]
+}

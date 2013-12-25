@@ -1,0 +1,85 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "htmlPanel",
+        "designer|userClassName": "HtmlPanel",
+        "itemId": "homePanel"
+    },
+    "designerId": "12fcc33d-36a7-475b-8792-6b6c96745316",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "config",
+            "type": "string"
+        }
+    ],
+    "cn": [
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onHomePanelInitialize",
+                "implHandler": [
+                    "component.element.dom.addEventListener('click',function(e){\r",
+                    "    console.log(e.target);\r",
+                    "\r",
+                    "\r",
+                    "    if (e.target.tagName == 'A') {\r",
+                    "        alert(2);\r",
+                    "        return;\r",
+                    "    };\r",
+                    "    if (e.target.tagName == 'INPUT') {\r",
+                    "        e.preventDefault();\r",
+                    "        var href = e.target.form.action;\r",
+                    "\r",
+                    "\r",
+                    "//         Ext.Ajax.request({\r",
+                    "//             url: href,\r",
+                    "//             method: 'GET',\r",
+                    "//             dataType: \"json\",\r",
+                    "//             disableCaching: true,\r",
+                    "\r",
+                    "//             callback: function(options, success, response) {\r",
+                    "//                 var newPanel= Ext.create(\"VKM.view.HtmlPanel\",{\r",
+                    "//                     fullscreen: true,\r",
+                    "//                     items: [\r",
+                    "//                         {\r",
+                    "//                             title: 'Логин',\r",
+                    "//                             html:  response.responseText\r",
+                    "//                         }\r",
+                    "//                     ]});\r",
+                    "//                 newPanel.show();\r",
+                    "//             }\r",
+                    "//         });\r",
+                    "\r",
+                    "\r",
+                    "\r",
+                    "\r",
+                    "\r",
+                    "    };\r",
+                    "    return;\r",
+                    "\r",
+                    "\r",
+                    "\r",
+                    "\r",
+                    "\r",
+                    "\r",
+                    "\r",
+                    "}, false);\r",
+                    ""
+                ],
+                "name": "initialize"
+            },
+            "designerId": "a347c318-0108-484e-842b-ec63ece37717"
+        }
+    ]
+}

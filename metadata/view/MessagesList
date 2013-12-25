@@ -1,0 +1,95 @@
+{
+    "type": "Ext.dataview.DataView",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "defaultType": "messageItem",
+        "deselectOnContainerClick": false,
+        "designer|userAlias": "messageslist",
+        "designer|userClassName": "MessagesList",
+        "height": null,
+        "itemCls": "x-list-item",
+        "itemId": "mydataview1",
+        "maxItemCache": 50,
+        "plugins": null,
+        "scrollToTopOnRefresh": false,
+        "store": "AllMessages",
+        "useComponents": true
+    },
+    "configAlternates": {
+        "plugins": "object"
+    },
+    "designerId": "d0fce6fe-deb3-41b9-9ca8-1d7a9e719595",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "plugins",
+            "type": "string"
+        }
+    ],
+    "cn": [
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onMydataview1Refresh",
+                "implHandler": [
+                    "// var component=dataview;\r",
+                    "// var scroller = component.getScrollable().getScroller(),\r",
+                    "//     store    = component.getStore();\r",
+                    "\r",
+                    "// component.scroller=scroller;\r",
+                    "// scroller.list=component;\r",
+                    "// scroller.on({\r",
+                    "//     scrollend: component.onScrollEnd,\r",
+                    "//     scope: component\r",
+                    "// });\r",
+                    "\r",
+                    "// scroller.on({\r",
+                    "//     scrollend: component.onScrollEnd,\r",
+                    "//     scope: component\r",
+                    "// });\r",
+                    ""
+                ],
+                "name": "refresh"
+            },
+            "designerId": "bab35e0f-76a5-448b-8042-86af1c044f7c"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "scroller",
+                    "x",
+                    "y"
+                ],
+                "fn": "onScrollEnd",
+                "implHandler": [
+                    "// var list = this;\r",
+                    "\r",
+                    "// if (!this.loading && y >= scroller.maxPosition.y) {\r",
+                    "//     this.loading=true;\r",
+                    "//     this.fireEvent('loadNext',list);\r",
+                    "// };\r",
+                    "// if (!this.loading && y <= scroller.minPosition.y) {\r",
+                    "//     this.loading=true;\r",
+                    "//     this.fireEvent('loadPrevious',list);\r",
+                    "// };"
+                ]
+            },
+            "designerId": "f17382c4-f5b8-42a5-b7d8-c71b7abb2b31"
+        }
+    ]
+}

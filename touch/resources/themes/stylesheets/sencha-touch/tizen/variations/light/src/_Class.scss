@@ -1,0 +1,12 @@
+$light-background-color: #eeeeee !default;
+
+$light-primary-text-color: #000000 !default;
+$light-secondary-text-color: #333333 !default;
+
+$light-input-background-color: #1D263C !default;
+$light-confirm-color: #68B107 !default;
+$light-alert-color: #CB0000 !default;
+
+body {
+	background-color: $light-background-color;
+}

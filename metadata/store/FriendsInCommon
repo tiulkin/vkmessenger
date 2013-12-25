@@ -1,0 +1,114 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "clearOnPageLoad": false,
+        "designer|userClassName": "FriendsInCommon",
+        "model": null,
+        "pageSize": 10000,
+        "storeId": "FriendsInCommon",
+        "syncRemovedRecords": false
+    },
+    "designerId": "4d91de5e-428b-4770-9533-6300deb15cef",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Rest",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "appendId": false,
+                "enablePagingParams": null,
+                "filterParam": "undefined",
+                "groupParam": "undefined",
+                "limitParam": "count",
+                "pageParam": null,
+                "startParam": "offset",
+                "url": "https://api.vk.com/method/execute.friendsInCommon"
+            },
+            "designerId": "753d89b3-1b9e-4ef6-b01c-c42647a8ae83",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "idProperty": null,
+                        "rootProperty": "response",
+                        "totalProperty": null
+                    },
+                    "designerId": "2a477e33-5235-42b3-9e08-bfca48f8e952"
+                }
+            ]
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "id"
+            },
+            "designerId": "0d89486e-17d4-41b6-a2ec-8531a3b5cd7c"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "first_name"
+            },
+            "designerId": "caf3cffc-7919-423f-8ff6-6449fe814ec2"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "last_name"
+            },
+            "designerId": "d2f36ac1-b77c-451d-b441-4715debfbb03"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "photo_50"
+            },
+            "designerId": "390ae26f-3053-4f6f-84bc-9b284e228353"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "photo_100"
+            },
+            "designerId": "38827772-187d-47f0-971a-64b0769c6221"
+        }
+    ]
+}

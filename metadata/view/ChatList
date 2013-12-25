@@ -1,0 +1,99 @@
+{
+    "type": "Ext.dataview.List",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "defaultType": "messageItem",
+        "deselectOnContainerClick": false,
+        "designer|userAlias": "chatlist",
+        "designer|userClassName": "ChatList",
+        "grouped": true,
+        "height": null,
+        "itemCls": "x-list-item",
+        "itemId": "mydataview2",
+        "scrollToTopOnRefresh": false,
+        "selectedCls": "selectedMask",
+        "store": "Chat",
+        "triggerEvent": "itemdoubletap"
+    },
+    "configAlternates": {
+        "plugins": "object",
+        "style": "object"
+    },
+    "designerId": "885a8e63-c514-4cde-acab-73b1a166e4e2",
+    "cn": [
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "scroller",
+                    "x",
+                    "y"
+                ],
+                "fn": "onScrollEnd",
+                "implHandler": [
+                    "// var list = this;\r",
+                    "\r",
+                    "// if (!this.loading && y >= scroller.maxPosition.y) {\r",
+                    "//     this.loading=true;\r",
+                    "//     this.fireEvent('loadNext',list);\r",
+                    "// };\r",
+                    "// console.log('scroll');\r",
+                    "// if (!this.loading && y <= scroller.minPosition.y) {\r",
+                    "//     this.loading=true;\r",
+                    "//     this.fireEvent('loadPrevious',list);\r",
+                    "// };"
+                ]
+            },
+            "designerId": "5ba4ab67-a177-4107-b87c-6c86b4ed7bcb"
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onMydataview2Initialize",
+                "implHandler": [
+                    "component.setPlugins({type:'listpagingreverse', autoPaging: true});"
+                ],
+                "name": "initialize"
+            },
+            "designerId": "863f45a6-643d-4bab-94ad-8314dc1784f4"
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onMydataview2Painted",
+                "implHandler": [
+                    "// if (VKM.app.globals.settings.chatSelection=='longclick')\r",
+                    "// {\r",
+                    "//     this.setTriggerEvent('itemtapHold');\r",
+                    "// }\r",
+                    "// else\r",
+                    "// {\r",
+                    "//     this.setTriggerEvent('itemdoubletap');\r",
+                    "// }\r",
+                    ""
+                ],
+                "name": "painted"
+            },
+            "designerId": "3df296b0-f042-46e2-abac-9d574b2974d4"
+        }
+    ]
+}

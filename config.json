@@ -1,0 +1,72 @@
+{
+"globals":
+	[
+		{
+			"variable":"dbName",
+			"value":"noerp_001"		
+		},
+		{
+			"variable":"dbType",
+			"value":"pouch"		
+		},
+		{
+			"variable":"localServer",
+			"value":""		
+		},		
+		{
+			"variable":"remoteServer",
+			"value":"http://192.168.2.8:5984"		
+		},		
+		{
+			"variable":"numericfieldXtype",
+			"value":"numpadfield"
+		},
+		{
+			"variable":"staticWords",
+			"value":
+			
+				{
+				"dirType":
+					{"Ru":
+					 {"2":"Варианты","1":"Свойства","3":"Товары"},
+					 "En":
+					 {"2":"Options","1":"Characteristics","3":"Items"}
+					}
+				}
+			
+			
+		},
+		{
+			"variable":"currencyCode",
+			"value":"USD"
+		},
+		{
+			"variable":"defaultItemsDeb",
+			"value":"defaultCustomer"		
+		},
+		{
+			"variable":"defaultItemsCre",
+			"value":"currentShop"		
+		},
+		{
+			"variable":"defaultMoneyCre",
+			"value":"defaultCustomer"		
+		},
+		{
+			"variable":"defaultMoneyDeb",
+			"value":"currentShop"		
+		},
+		{		
+			"variable":"detailsControllers",
+			"value":{
+					"resources":{"controllerName":"ItemsDetailsPanel","lockField":"itemUnits"},
+					"businesses":{"controllerName":"SimpleDetailsPanel","lockField":"itemUnits"},
+					"agents":{"controllerName":"SimpleDetailsPanel","lockField":""},
+					"taskTypes":{"controllerName":"SimpleDetailsPanel","lockField":""},
+					"links":{"controllerName":"SimpleDetailsPanel","lockField":""},
+					"reports":{"controllerName":"SimpleDetailsPanel","lockField":""},
+					"units":{"controllerName":"SimpleDetailsPanel","lockField":""}
+				}
+		}
+	]
+}

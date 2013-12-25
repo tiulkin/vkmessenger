@@ -1,0 +1,43 @@
+{
+    "type": "packagesetting",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "androidAPILevel": "10",
+        "applicationId": "com.mycompany.myAppID",
+        "applicationName": "vkm",
+        "certificatePassword": "",
+        "certificatePath": "",
+        "configuration": "Debug",
+        "designer|userClassName": "packager",
+        "deviceType": "Universal",
+        "icon": [
+            "{\"36\":\"resources/icons/Icon_Android36.png\",\"48\":\"resources/icons/Icon_Android48.png\",\"72\":\"resources/icons/Icon~ipad.png\"}"
+        ],
+        "inputPath": "./",
+        "orientations": [
+            "portrait",
+            "landscapeLeft",
+            "landscapeRight",
+            "portraitUpsideDown"
+        ],
+        "outputPath": "../build/",
+        "permissions": [
+            "INTERNET",
+            "ACCESS_NETWORK_STATE",
+            "CAMERA",
+            "VIBRATE",
+            "ACCESS_FINE_LOCATION",
+            "ACCESS_COARSE_LOCATION",
+            "CALL_PHONE"
+        ],
+        "platform": "AndroidEmulator",
+        "sdkPath": "C:/android",
+        "versionCode": "1",
+        "versionString": "1.0"
+    },
+    "designerId": "0c387b1a-8aba-4204-8d34-113a7e9b3561"
+}

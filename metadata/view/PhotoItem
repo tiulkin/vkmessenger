@@ -1,0 +1,76 @@
+{
+    "type": "Ext.dataview.component.DataItem",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "cls": [
+            "img3"
+        ],
+        "designer|userAlias": "photoitem",
+        "designer|userClassName": "PhotoItem",
+        "html": null,
+        "layout": "fit",
+        "padding": null,
+        "width": 170
+    },
+    "designerId": "e2b75be3-a065-4543-af60-127a287eb4f6",
+    "cn": [
+        {
+            "type": "Ext.Component",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "checkMarkIcon"
+                ],
+                "html": ""
+            },
+            "designerId": "e9d7c791-a444-4df1-acd4-b26439e9c316"
+        },
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "record"
+                ],
+                "fn": "updateRecord",
+                "implHandler": [
+                    "//console.log(1234);\r",
+                    "if(record)\r",
+                    "{\r",
+                    "    this.down('#photo').setSrc(record.get('photo_604'));\r",
+                    "};"
+                ]
+            },
+            "designerId": "f68874f3-ae10-4850-91b2-f8fc0b836e75"
+        },
+        {
+            "type": "Ext.Img",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "img3",
+                    "PhotoBoxShadow",
+                    "PhotoBorderRadius"
+                ],
+                "itemId": "photo"
+            },
+            "designerId": "ad552ea7-8381-4c77-9edc-2bc26ef71faa"
+        }
+    ]
+}

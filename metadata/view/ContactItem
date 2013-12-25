@@ -1,0 +1,154 @@
+{
+    "type": "Ext.dataview.component.ListItem",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "contactItem",
+        "designer|userClassName": "ContactItem",
+        "itemCls": "x-list-item",
+        "layout": "vbox",
+        "padding": "5 0 0 0"
+    },
+    "designerId": "53947cc2-694f-4f3a-bd0f-6493a583e935",
+    "cn": [
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "record"
+                ],
+                "fn": "updateRecord",
+                "implHandler": [
+                    "if (!record) return\r",
+                    "\r",
+                    "var user=record;\r",
+                    "this.down('#avatar').setSrc(user.get('photo_50'));\r",
+                    "var isOnlineCls=\"\";\r",
+                    "if (user.get('online'))\r",
+                    "{\r",
+                    "    isOnlineCls='class=\"userOnline\"';\r",
+                    "    this.down('#body').setHidden(true);\r",
+                    "}\r",
+                    "else\r",
+                    "{\r",
+                    "    isOnlineCls='class=\"userOffline\"';\r",
+                    "\r",
+                    "    if (user.get('last_seen')&&!user.get('online'))\r",
+                    "    {\r",
+                    "        var last_seen=new Date(parseInt(user.get('last_seen').time)*1000);\r",
+                    "        this.down('#body').setHidden(false);\r",
+                    "        this.down('#body').setHtml(ux.locale.Manager.get('labels.lastvisit')+' '+moment(last_seen).fromNow());\r",
+                    "    }\r",
+                    "    else\r",
+                    "    {\r",
+                    "        this.down('#body').setHidden(false);\r",
+                    "        this.down('#body').setHtml(ux.locale.Manager.get('labels.Online'));\r",
+                    "    }\r",
+                    "        ;\r",
+                    "}\r",
+                    "this.down('#name').setHtml('<span '+isOnlineCls+'>'+Ext.String.ellipsis(user.get('first_name')+' '+user.get('last_name'),23)+'</span>'); //+isOnline);\r",
+                    ""
+                ]
+            },
+            "designerId": "4c604ec2-9be1-41ff-b594-e0f3aad5b598"
+        },
+        {
+            "type": "Ext.Img",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "left",
+                "height": 40,
+                "itemId": "avatar",
+                "margin": 2,
+                "style": [
+                    "style=\"border-radius: 50% 50% 50% 50%\""
+                ],
+                "width": 40
+            },
+            "configAlternates": {
+                "style": "object"
+            },
+            "designerId": "6911ffd2-bd9a-4985-962d-abbf992d89cd"
+        },
+        {
+            "type": "Ext.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "container|align": "start",
+                "layout": "hbox",
+                "margin": 0
+            },
+            "designerId": "0e555809-7360-4823-80be-0d711aab5694",
+            "cn": [
+                {
+                    "type": "Ext.Component",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "name"
+                        ],
+                        "html": "Sample component inside dataitem",
+                        "itemId": "name",
+                        "layout|flex": 1
+                    },
+                    "designerId": "e5c593fb-ae90-4b96-bb7e-ae417fa6850b"
+                },
+                {
+                    "type": "Ext.Component",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "x-item-datetime"
+                        ],
+                        "docked": null,
+                        "hidden": true,
+                        "html": "Sample component inside dataitem",
+                        "itemId": "datetime"
+                    },
+                    "designerId": "c1ed2170-39e0-411e-8715-360a7672a189"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Component",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "x-item-body"
+                ],
+                "html": null,
+                "itemId": "body",
+                "layout|flex": 1
+            },
+            "designerId": "40eebcca-7dbc-4007-a2ae-659da59fb9dc"
+        }
+    ]
+}

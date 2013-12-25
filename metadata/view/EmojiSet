@@ -1,0 +1,35 @@
+{
+    "type": "Ext.dataview.DataView",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "emojiset",
+        "designer|userClassName": "EmojiSet",
+        "inline": [
+            "{ wrap: true }"
+        ],
+        "itemId": "mydataview5",
+        "store": "emoji"
+    },
+    "designerId": "cdb810f3-7c52-4f33-ac21-62f01e7774f7",
+    "cn": [
+        {
+            "type": "Ext.XTemplate",
+            "reference": {
+                "name": "itemTpl",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "itemTpl",
+                "implHandler": [
+                    "<div style=\"margin:5px\"><img src=\"{path32}\"></img></div>"
+                ]
+            },
+            "designerId": "f196e5fb-6f9e-4c28-9cc2-26923a75626d"
+        }
+    ]
+}

@@ -1,0 +1,110 @@
+{
+    "type": "Ext.dataview.component.DataItem",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "albumitem",
+        "designer|userClassName": "AlbumItem",
+        "itemCls": "x-list-item",
+        "layout": "hbox",
+        "padding": 10
+    },
+    "designerId": "e7e02226-db34-44d5-b8a7-9d6f41fa773b",
+    "cn": [
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "record"
+                ],
+                "fn": "updateRecord",
+                "implHandler": [
+                    "// Provide an implementation to update this container's child items\r",
+                    "if(!this.counter)\r",
+                    "{\r",
+                    "    this.counter =1;\r",
+                    "}\r",
+                    "else\r",
+                    "{\r",
+                    "    this.counter+=1;\r",
+                    "}\r",
+                    "if (this.counter % 2 == 0)\r",
+                    "{\r",
+                    "    this.down('#albumCover').setSrc(record.get('thumb_src'));\r",
+                    "    this.down('#albumCover').setHtml(record.get('title')+'('+record.get('size')+')');\r",
+                    "}\r",
+                    "else\r",
+                    "{\r",
+                    "    this.down('#albumCover1').setSrc(record.get('thumb_src'));\r",
+                    "    this.down('#albumCover1').setHtml(record.get('title')+'('+record.get('size')+')');\r",
+                    "}\r",
+                    "//this.down('#albumDescription').setHtml('<div>'+record.get('title')+'</div><br/><div>'+record.get('size')+' '+Ext.util.Inflector.pluralize(ux.locale.Manager.get('labels.Photo'))); //record.get('title'));\r",
+                    ""
+                ]
+            },
+            "designerId": "4954a9df-fb4f-4dbc-bedb-a1139eb40db2"
+        },
+        {
+            "type": "Ext.Img",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "x-white"
+                ],
+                "docked": "left",
+                "height": 150,
+                "hidden": null,
+                "itemId": "albumCover",
+                "minHeight": null,
+                "minWidth": null,
+                "style": [
+                    "{\"background-size\": \"cover\"}"
+                ],
+                "width": 150
+            },
+            "configAlternates": {
+                "style": "object"
+            },
+            "designerId": "6e6bbad2-e41d-48fc-bbcb-6be2000533c2"
+        },
+        {
+            "type": "Ext.Img",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "x-white"
+                ],
+                "docked": "left",
+                "height": 150,
+                "hidden": null,
+                "itemId": "albumCover1",
+                "minHeight": null,
+                "minWidth": null,
+                "style": [
+                    "{\"background-size\": \"cover\"}"
+                ],
+                "width": 150
+            },
+            "configAlternates": {
+                "style": "object"
+            },
+            "designerId": "ba44fb80-db7d-4f90-bab2-74a7460ed982"
+        }
+    ]
+}

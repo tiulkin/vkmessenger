@@ -1,0 +1,14 @@
+$light-button-color: pink !default;
+$light-button-pressing-color: #212d8d !default;
+
+.x-button {
+    background-color: $light-button-color;
+
+    .x-button-label {
+        color: $light-primary-text-color;
+    }
+}
+
+.x-button-pressing {
+     background-color: $light-button-pressing-color;
+}

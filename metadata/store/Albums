@@ -1,0 +1,28 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Albums",
+        "model": "Albums",
+        "storeId": "Albums"
+    },
+    "designerId": "46eb2d10-f3d5-486a-874f-1cf7f68f4c85",
+    "cn": [
+        {
+            "type": "Ext.util.Sorter",
+            "reference": {
+                "name": "sorters",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "property": "title"
+            },
+            "designerId": "dc31fd47-c730-4ef0-b906-3c9e8cce6885"
+        }
+    ]
+}

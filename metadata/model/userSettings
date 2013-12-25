@@ -1,0 +1,89 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "userSettings",
+        "identifier": [
+            "{\"type\":\"simple\"}"
+        ]
+    },
+    "designerId": "cc28f56f-11f8-445d-b391-0bde6b90b2bf",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "value"
+            },
+            "designerId": "80b5043b-6027-4828-9d03-34d3a7f861f2"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "vibrate"
+            },
+            "designerId": "1bf79b2f-6c33-4c38-a991-a23a5a148c03"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "sound"
+            },
+            "designerId": "a57e8645-198b-43b9-bdf8-34aea67463e6"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "isActive"
+            },
+            "designerId": "1a0a9fe5-7b06-4053-b729-7be17e066d6a"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "banner"
+            },
+            "designerId": "a13603b1-26db-4531-ae3c-d7d8fefb5b68"
+        },
+        {
+            "type": "Ext.data.proxy.LocalStorage",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": "userSettings"
+            },
+            "designerId": "ea29292c-26ee-442e-ae9e-e0d90475ff25"
+        }
+    ]
+}

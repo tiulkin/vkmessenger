@@ -1,0 +1,14 @@
+//Button Label
+$dark-button-label-color: $winset-white !default;
+$dark-button-label-disabled-color: $winset-white !default;
+
+//Button Background
+$dark-button-background: $dark-primary-gradient !default;
+$dark-button-pressing-background: $gradient-down-blue !default;
+$dark-button-confirm-background: $gradient-down-green !default;
+$dark-button-decline-background: $gradient-down-red !default;
+$dark-button-confirm-pressing-background: $gradient-up-green !default;
+$dark-button-decline-pressing-background: $gradient-up-red !default;
+
+//Badges
+$dark-badge-background-color: $color-orange;

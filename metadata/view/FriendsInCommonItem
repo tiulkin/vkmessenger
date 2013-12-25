@@ -1,0 +1,64 @@
+{
+    "type": "Ext.dataview.component.DataItem",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "FriendsInCommonItem",
+        "itemCls": "x-list-item",
+        "layout": "hbox",
+        "padding": 10
+    },
+    "designerId": "5ccfcf9e-67ea-41af-b853-332cfbc26109",
+    "cn": [
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "record"
+                ],
+                "fn": "updateRecord",
+                "implHandler": [
+                    "this.down('#albumCover').setSrc(record.get('photo_100'));\r",
+                    "this.down('#albumCover').setHtml(record.get('first_name')+' '+record.get('last_name'));\r",
+                    ""
+                ]
+            },
+            "designerId": "9a6b35ec-04ca-496f-8def-eb443713b2ad"
+        },
+        {
+            "type": "Ext.Img",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "x-white"
+                ],
+                "docked": "left",
+                "height": 150,
+                "hidden": null,
+                "itemId": "albumCover",
+                "minHeight": null,
+                "minWidth": null,
+                "style": [
+                    "{\"background-size\": \"cover\"}"
+                ],
+                "width": 150
+            },
+            "configAlternates": {
+                "style": "object"
+            },
+            "designerId": "90fa3da9-a93a-454c-a35b-f75bc593e951"
+        }
+    ]
+}

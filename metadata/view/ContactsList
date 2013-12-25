@@ -1,0 +1,34 @@
+{
+    "type": "Ext.dataview.DataView",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "defaultType": "contactItem",
+        "deselectOnContainerClick": false,
+        "designer|userAlias": "contactslist",
+        "designer|userClassName": "ContactsList",
+        "height": null,
+        "itemCls": "x-list-item",
+        "itemId": null,
+        "maxItemCache": 50,
+        "mode": "MULTI",
+        "plugins": null,
+        "scrollToTopOnRefresh": false,
+        "store": "Friends",
+        "useComponents": true
+    },
+    "configAlternates": {
+        "plugins": "object"
+    },
+    "designerId": "e4045371-8268-46d8-bfc4-cdf5b918f14c",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "plugins",
+            "type": "string"
+        }
+    ]
+}

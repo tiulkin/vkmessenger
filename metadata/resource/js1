@@ -1,0 +1,13 @@
+{
+    "type": "jsoverrideresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "js1",
+        "url": "app/override/data/proxy/LocalStorage.js"
+    },
+    "designerId": "bdc240c0-ba6c-4bc2-aed3-8a64943c81e6"
+}

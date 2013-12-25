@@ -1,0 +1,29 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "MyPanel",
+        "itemId": "contactPanel"
+    },
+    "designerId": "0861ce9b-c40b-45c7-ba71-97bdfcc43a29",
+    "cn": [
+        {
+            "type": "Ext.Label",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "centered": true,
+                "html": "Contact Us",
+                "itemId": "contactLabel"
+            },
+            "designerId": "78ead923-8982-40c9-b215-a2ec0df7c653"
+        }
+    ]
+}

@@ -1,0 +1,68 @@
+/**
+ * @class Ext.Toolbar
+ */
+.x-toolbar {
+    border-width: 0 !important;
+    height: 50px;
+    min-height: 50px;
+    background-color: $toolbar-color;
+    color: $primary-text-color;
+
+    &.x-docked-bottom {
+        height: 66px;
+    }
+
+    .x-button-icon:before {
+        color: $primary-text-color;
+    }
+
+    .x-button {
+        border-width: 0 0 0 1px !important;
+        border-color: $primary-text-color;
+        font-size: 1em;
+        background: transparent none !important;
+        @include box-shadow(none);
+    }
+
+    // .x-button-pressing,
+    // .x-button-pressed {
+    //     .x-button-icon:before {
+    //         color: #fff;
+    //     }
+    // }
+}
+
+// .x-tabbar.x-docked-bottom,
+// .x-toolbar.x-docked-bottom {
+//     height: 66px;
+
+//     .x-button-normal,
+//     .x-button-normal:before {
+//         border: 0 !important;
+//         background: transparent none !important;
+//         @include box-shadow(none);
+//     }
+
+//     .x-button-normal:before {
+//         height: 2px !important;
+//     }
+
+//     .x-button.menu {
+//         margin: 0;
+//         border-right-style: solid;
+//         border-right-width: 1px;
+//     }
+// }
+
+.x-title {
+    color: $primary-text-color;
+    font-size: $small-font-size;
+    font-weight: normal;
+}
+
+// .x-toolbar {
+//     .x-field-focused .x-input-el {
+//         @include border-radius(2px);
+//         border: 2px solid $base-color;
+//     }
+// }

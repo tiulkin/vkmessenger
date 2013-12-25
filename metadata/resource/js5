@@ -1,0 +1,13 @@
+{
+    "type": "jsoverrideresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "js5",
+        "url": "app/override/data/proxy/Rest.js"
+    },
+    "designerId": "ada01f07-5883-4572-86d4-31f5b2b4388a"
+}

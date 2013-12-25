@@ -1,0 +1,117 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "clearOnPageLoad": false,
+        "designer|userClassName": "Chat",
+        "groupDir": "ASC",
+        "model": "Chat",
+        "pageSize": 10,
+        "storeId": "Chat"
+    },
+    "designerId": "cfe82d1c-453d-4c3f-86b7-153cf9c82960",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Rest",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "filterParam": "undefinded",
+                "groupParam": "undefinded",
+                "limitParam": "count",
+                "startParam": "offset"
+            },
+            "designerId": "4655059a-57f7-40ca-b885-2c89f1df65fa",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "response.items",
+                        "totalProperty": "response.count"
+                    },
+                    "designerId": "431943ce-4075-49c0-a477-a85802784880"
+                }
+            ]
+        },
+        {
+            "type": "Ext.util.Sorter",
+            "reference": {
+                "name": "sorters",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "property": "date"
+            },
+            "designerId": "08ac1dea-7539-4977-b631-664edee752ee"
+        },
+        {
+            "type": "Ext.util.Grouper",
+            "reference": {
+                "name": "grouper",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "sortProperty": "date"
+            },
+            "designerId": "6f378672-2de4-456a-af03-43d06469d4b6",
+            "cn": [
+                {
+                    "type": "fixedfunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|params": [
+                            "item"
+                        ],
+                        "fn": "groupFn",
+                        "implHandler": [
+                            "if(item.get('id')==0)\r",
+                            "{\r",
+                            "    return('');\r",
+                            "}\r",
+                            "else\r",
+                            "{\r",
+                            "    return moment(parseInt(item.get('date'))*1000).format('D MMMM YYYY');\r",
+                            "}"
+                        ]
+                    },
+                    "designerId": "3fa8b901-0d57-489f-8723-50901ccc35c7"
+                }
+            ]
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onStoreLoad",
+                "implHandler": [
+                    "// console.log('chat');\r",
+                    "// console.log(records);"
+                ],
+                "name": "load"
+            },
+            "designerId": "cc70dbda-c4f0-40a9-8c15-e44ddb80a566"
+        }
+    ]
+}

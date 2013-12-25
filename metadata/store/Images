@@ -1,0 +1,57 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "clearOnPageLoad": false,
+        "designer|userClassName": "Images",
+        "limitParam": null,
+        "model": "Images",
+        "pageSize": 10,
+        "storeId": "Images"
+    },
+    "designerId": "d412b96a-90e8-475d-85e9-e563b351433b",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "limitParam",
+            "type": "string"
+        }
+    ],
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Rest",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "filterParam": "undefined",
+                "groupParam": "undefined",
+                "limitParam": "count",
+                "sortParam": "undefined",
+                "startParam": "offset"
+            },
+            "designerId": "1e64320a-a770-4e37-a5f3-54336ca97d55",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "response.items",
+                        "totalProperty": "response.count"
+                    },
+                    "designerId": "336adac3-1150-424e-8c3c-871cdd67f91a"
+                }
+            ]
+        }
+    ]
+}

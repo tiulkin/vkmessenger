@@ -1,0 +1,13 @@
+{
+    "type": "jsresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "js7",
+        "url": "pdf.worker.js "
+    },
+    "designerId": "5be67ce0-4ccc-419f-8718-b79f12077461"
+}

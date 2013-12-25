@@ -1,0 +1,13 @@
+{
+    "type": "jsoverrideresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "js2",
+        "url": "app/override/dataview/List.js"
+    },
+    "designerId": "4264f8b6-f4fc-4c0a-8b13-af098bb47706"
+}

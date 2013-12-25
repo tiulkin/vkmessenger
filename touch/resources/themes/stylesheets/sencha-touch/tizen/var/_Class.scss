@@ -1,0 +1,20 @@
+$theme-dark: 'dark';
+$theme-light: 'light';
+
+$include-default-icons: true !default;
+$theme: $theme-dark !default;
+
+$theme-name: 'tizen'+'/'+$theme;
+
+$background-color: #000000 !default;
+$toolbar-color: #313F66 !default;
+
+$primary-text-color: #ffffff !default;
+$secondary-text-color: $toolbar-color !default;
+
+$default-button-color: #464C5E !default;
+$input-background-color: #1D263C !default;
+$confirm-color: #68B107 !default;
+$alert-color: #CB0000 !default;
+
+$small-font-size: 24px;

@@ -1,0 +1,69 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Friends",
+        "groupDir": "ASC",
+        "model": "User",
+        "pageSize": 20,
+        "remoteGroup": true,
+        "storeId": "Friends"
+    },
+    "designerId": "c16ffd51-4285-4bed-b7fc-2e506a0f9a92",
+    "cn": [
+        {
+            "type": "Ext.util.Grouper",
+            "reference": {
+                "name": "grouper",
+                "type": "object"
+            },
+            "codeClass": null,
+            "designerId": "02218ca7-6dcc-4415-90c2-2fc0fe3c032e",
+            "cn": [
+                {
+                    "type": "fixedfunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|params": [
+                            "item"
+                        ],
+                        "fn": "groupFn",
+                        "implHandler": [
+                            "if (item.get('important')!=\"\"&&item.get('important')!=undefined)\r",
+                            "{\r",
+                            "    return(item.get('important'))\r",
+                            "}\r",
+                            "else\r",
+                            "{\r",
+                            "    return (item.get('first_name')[0]);\r",
+                            "}\r",
+                            ""
+                        ]
+                    },
+                    "designerId": "d77153b1-6317-4821-b6c8-fbdde7292e50"
+                }
+            ]
+        },
+        {
+            "type": "Ext.data.proxy.Rest",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "limitParam": "count",
+                "startParam": "offset"
+            },
+            "designerId": "e477ea12-1ee7-4f35-8993-2bd7f31a61f6"
+        }
+    ]
+}
