@@ -4,11 +4,11 @@ $dark-button-label-disabled-color: $winset-white !default;
 
 //Button Background
 $dark-button-background: $dark-primary-gradient !default;
-$dark-button-pressing-background: $gradient-down-blue !default;
-$dark-button-confirm-background: $gradient-down-green !default;
-$dark-button-decline-background: $gradient-down-red !default;
-$dark-button-confirm-pressing-background: $gradient-up-green !default;
-$dark-button-decline-pressing-background: $gradient-up-red !default;
+$dark-button-pressing-background: $dark-gradient-down-blue !default;
+$dark-button-confirm-background: $dark-gradient-down-green !default;
+$dark-button-decline-background: $dark-gradient-down-red !default;
+$dark-button-confirm-pressing-background: $dark-gradient-up-green !default;
+$dark-button-decline-pressing-background: $dark-gradient-up-red !default;
 
 //Badges
-$dark-badge-background-color: $color-orange;
+$dark-badge-background-color: $dark-color-orange;

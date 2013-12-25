@@ -5,13 +5,16 @@ Copyright (c) 2011-2013 Sencha Inc
 
 Contact:  http://www.sencha.com/contact
 
-Pre-release code in the Sencha repository is intended for development purposes only and will
-not always be stable.
+GNU General Public License Usage
+This file may be used under the terms of the GNU General Public License version 3.0 as
+published by the Free Software Foundation and appearing in the file LICENSE included in the
+packaging of this file.
 
-Use of pre-release code is permitted with your application at your own risk under standard
-Sencha license terms. Public redistribution is prohibited.
+Please review the following information to ensure the GNU General Public License version 3.0
+requirements will be met: http://www.gnu.org/copyleft/gpl.html.
 
-For early licensing, please contact us at licensing@sencha.com
+If you are unsure which license is appropriate for your use, please contact the sales department
+at http://www.sencha.com/contact.
 
-Build date: 2013-11-19 02:15:06 (92c0e07b52dd466c9b6059b8539b47ce12fc7d54)
+Build date: 2013-11-08 13:58:42 (d989f4377b0a56f9f540fd415741d1f2db1c7977)
 */

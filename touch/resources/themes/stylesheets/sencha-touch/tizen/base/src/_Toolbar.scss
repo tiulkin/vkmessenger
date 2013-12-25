@@ -13,6 +13,9 @@
 		margin: 0 5px;
 		@include box-shadow(none);
 		padding-left: 1em;
+		border-left: 1px;
+		border-radius: 0px;
+		padding-right: 0.6em;
 
 		&.x-button-back {
 			border-left: 0;

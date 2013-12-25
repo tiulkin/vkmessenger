@@ -12,7 +12,7 @@
     &.x-field-focused {
         .x-clear-icon,
         .x-component-outer .x-input-el {
-						border: 1px solid $dark-field-border-color;
+						border-color: $dark-field-border-color;
         }
     }
 }

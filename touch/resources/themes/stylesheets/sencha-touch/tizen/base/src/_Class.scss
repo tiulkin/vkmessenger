@@ -9,6 +9,10 @@ body,
 html {
 	font-family: "Tizen Regular";
 	font-size: 100%;
+
+	&.tizenThemeTransition * {
+		transition: background 1s !important;
+	}
 }
 
 input,

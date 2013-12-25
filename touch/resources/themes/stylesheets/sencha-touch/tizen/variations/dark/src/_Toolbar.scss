@@ -6,7 +6,8 @@
 		border-color: $dark-toolbar-button-border-color;
 		background-color: transparent;
 		background: none;
-		border-left: 1px solid $dark-toolbar-button-separator-color;
+		border-left-style: solid;
+		border-left-color: $dark-toolbar-button-separator-color;
 
 		&.x-button-pressing {
 			.x-button-label {
